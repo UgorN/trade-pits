@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrocinadores COP30 - Turismo Sustentável</title>
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-primary: #10b981;
+            --color-primary-dark: #059669;
+            --color-primary-light: #34d399;
+            --color-secondary: #064e3b;
+            --color-accent: #fbbf24;
+            --color-background: #f0fdf4;
+            --color-surface: #ffffff;
+            --color-text: #1f2937;
+            --color-text-light: #6b7280;
+            --color-border: #d1fae5;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--color-text);
+            background-color: var(--color-background);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            background: linear-gradient(135deg, #064e3b 0%, #059669 50%, #10b981 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><path d="M0,300 Q300,200 600,300 T1200,300 L1200,600 L0,600 Z" fill="rgba(6,78,59,0.3)"/></svg>')
+                no-repeat bottom;
+            background-size: cover;
+            animation: wave 20s ease-in-out infinite;
+        }
+
+        @keyframes wave {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+        }
+
+        .logo-cop30 {
+            margin-bottom: 30px;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .cop30-logo {
+            width: 200px;
+            height: 80px;
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+        }
+
+        .logo-text {
+            font-size: 48px;
+            font-weight: 900;
+            fill: white;
+            letter-spacing: 4px;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-out 0.2s both;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 40px;
+            animation: fadeInUp 1s ease-out 0.4s both;
+            opacity: 0.95;
+        }
+
+        /* Leaf Decoration */
+        .leaf-decoration {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+
+        .leaf {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            animation: float 15s infinite ease-in-out;
+        }
+
+        .leaf-1 { top: 20%; left: 10%; animation-delay: 0s; }
+        .leaf-2 { top: 60%; right: 15%; animation-delay: 5s; }
+        .leaf-3 { bottom: 30%; left: 20%; animation-delay: 10s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.3; }
+            50% { transform: translateY(-50px) rotate(180deg); opacity: 0.6; }
+        }
+
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-arrow {
+            width: 30px;
+            height: 30px;
+            border-left: 3px solid white;
+            border-bottom: 3px solid white;
+            transform: rotate(-45deg);
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        /* Mission Section */
+        .mission {
+            padding: 100px 20px;
+            background: var(--color-surface);
+        }
+
+        .mission-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .mission-label {
+            display: inline-block;
+            padding: 8px 20px;
+            background: var(--color-primary-light);
+            color: var(--color-secondary);
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .mission-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--color-secondary);
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+
+        .mission-text {
+            font-size: 1.125rem;
+            color: var(--color-text-light);
+            line-height: 1.8;
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+
+        .stat-card {
+            text-align: center;
+            color: white;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .stat-label {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .stat-description {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        /* Sponsors Section */
+        .sponsors {
+            padding: 100px 20px;
+            background: var(--color-background);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--color-secondary);
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: var(--color-text-light);
+        }
+
+        .sponsor-category {
+            margin-bottom: 80px;
+        }
+
+        .category-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--color-secondary);
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .category-icon {
+            font-size: 2.5rem;
+        }
+
+        .sponsors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .sponsor-card {
+            background: var(--color-surface);
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 2px solid var(--color-border);
+        }
+
+        .sponsor-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+            transform: scaleX(0);
+            transition: var(--transition);
+        }
+
+        .sponsor-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15);
+        }
+
+        .sponsor-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .sponsor-badge {
+            display: inline-block;
+            padding: 6px 16px;
+            background: var(--color-primary-light);
+            color: var(--color-secondary);
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+        }
+
+        .sponsor-logo {
+            margin-bottom: 25px;
+        }
+
+        .logo-placeholder {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--color-background);
+            border-radius: 50%;
+            padding: 20px;
+        }
+
+        .logo-icon {
+            width: 100%;
+            height: 100%;
+        }
+
+        .sponsor-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-secondary);
+            margin-bottom: 15px;
+        }
+
+        .sponsor-description {
+            font-size: 1rem;
+            color: var(--color-text-light);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .sponsor-features {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .sponsor-features li {
+            padding: 8px 0;
+            color: var(--color-text);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sponsor-contact {
+            padding-top: 20px;
+            border-top: 1px solid var(--color-border);
+        }
+
+        .contact-info {
+            color: var(--color-primary);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        /* Commitment Section */
+        .commitment {
+            padding: 100px 20px;
+            background: var(--color-surface);
+        }
+
+        .commitment-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .commitment-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--color-secondary);
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .commitment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 40px;
+        }
+
+        .commitment-item {
+            text-align: center;
+            padding: 30px 20px;
+            background: var(--color-background);
+            border-radius: 15px;
+            transition: var(--transition);
+        }
+
+        .commitment-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.1);
+        }
+
+        .commitment-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .commitment-item h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--color-secondary);
+            margin-bottom: 15px;
+        }
+
+        .commitment-item p {
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary-dark) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 25px;
+        }
+
+        .cta-text {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--color-primary);
+        }
+
+        .btn-primary:hover {
+            background: var(--color-background);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--color-primary);
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--color-secondary);
+            color: white;
+            padding: 60px 20px 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section {
+            text-align: left;
+        }
+
+        .footer-logo-svg {
+            width: 150px;
+            height: 60px;
+            margin-bottom: 15px;
+        }
+
+        .footer-logo-text {
+            font-size: 36px;
+            font-weight: 900;
+            fill: white;
+            letter-spacing: 3px;
+        }
+
+        .footer-tagline {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        .footer-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .footer-text {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.5rem; }
+            .hero-subtitle { font-size: 1.125rem; }
+            .mission-title { font-size: 2rem; }
+            .section-title { font-size: 2rem; }
+            .category-title { font-size: 1.5rem; }
+            .commitment-title { font-size: 2rem; }
+            .cta-title { font-size: 2rem; }
+            .cta-buttons { flex-direction: column; align-items: center; }
+            .btn { width: 100%; max-width: 300px; }
+            .sponsors-grid { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: 1fr; }
+            .commitment-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title { font-size: 2rem; }
+            .cop30-logo { width: 150px; height: 60px; }
+            .logo-text { font-size: 36px; }
+            .mission-title { font-size: 1.5rem; }
+            .section-title { font-size: 1.75rem; }
+            .stat-number { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="logo-cop30">
+                <svg viewBox="0 0 200 80" class="cop30-logo">
+                    <text x="10" y="60" class="logo-text">COP30</text>
+                </svg>
+            </div>
+            <h1 class="hero-title">Turismo Sustentável</h1>
+            <p class="hero-subtitle">Conheça nossos parceiros comprometidos com o futuro do planeta</p>
+            <div class="leaf-decoration">
+                <div class="leaf leaf-1"></div>
+                <div class="leaf leaf-2"></div>
+                <div class="leaf leaf-3"></div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </header>
+
+    <!-- Mission Statement -->
+    <section class="mission">
+        <div class="container">
+            <div class="mission-content">
+                <span class="mission-label">Nossa Missão</span>
+                <h2 class="mission-title">Conectando pessoas à natureza através do turismo responsável</h2>
+                <p class="mission-text">
+                    Nossos patrocinadores compartilham o compromisso com práticas sustentáveis, 
+                    preservação ambiental e desenvolvimento consciente. Juntos, construímos um 
+                    futuro onde turismo e natureza coexistem em harmonia.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Carbono Neutro</div>
+                    <p class="stat-description">Todas as empresas parceiras compensam suas emissões</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Parceiros</div>
+                    <p class="stat-description">Hotéis e agências comprometidas com sustentabilidade</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">1M+</div>
+                    <div class="stat-label">Árvores Plantadas</div>
+                    <p class="stat-description">Contribuição coletiva para reflorestamento</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsors Section -->
+    <section class="sponsors" id="sponsors">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nossos Patrocinadores</h2>
+                <p class="section-subtitle">Empresas líderes em turismo sustentável</p>
+            </div>
+
+            <!-- Hotel Sponsors -->
+            <div class="sponsor-category">
+                <h3 class="category-title">
+                    <span class="category-icon">🏨</span>
+                    Hotéis Sustentáveis
+                </h3>
+                <div class="sponsors-grid">
+                    <div class="sponsor-card">
+                        <div class="sponsor-badge">Certificado Verde</div>
+                        <div class="sponsor-logo">
+                            <div class="logo-placeholder">
+                                <svg viewBox="0 0 100 100" class="logo-icon">
+                                    <circle cx="50" cy="50" r="40" fill="#10b981"/>
+                                    <path d="M50 20 L50 50 L70 70" stroke="white" stroke-width="4" fill="none"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h4 class="sponsor-name">EcoLuxe Resort</h4>
+                        <p class="sponsor-description">
+                            Resort 5 estrelas com energia 100% solar e sistema de reciclagem de água. 
+                            Localizado em área de preservação ambiental.
+                        </p>
+                        <ul class="sponsor-features">
+                            <li>✓ Energia Solar</li>
+                            <li>✓ Arquitetura Bioclimática</li>
+                            <li>✓ Gastronomia Orgânica</li>
+                        </ul>
+                        <div class="sponsor-contact">
+                            <span class="contact-info">www.ecoluxeresort.com</span>
+                        </div>
+                    </div>
+
+                    <div class="sponsor-card">
+                        <div class="sponsor-badge">Certificado Verde</div>
+                        <div class="sponsor-logo">
+                            <div class="logo-placeholder">
+                                <svg viewBox="0 0 100 100" class="logo-icon">
+                                    <rect x="20" y="30" width="60" height="50" fill="#059669" rx="5"/>
+                                    <circle cx="50" cy="55" r="15" fill="white"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h4 class="sponsor-name">Amazônia Green Hotel</h4>
+                        <p class="sponsor-description">
+                            Hotel boutique integrado à floresta amazônica, com construção em madeira 
+                            certificada e programas de educação ambiental.
+                        </p>
+                        <ul class="sponsor-features">
+                            <li>✓ Construção Sustentável</li>
+                            <li>✓ Zero Plástico</li>
+                            <li>✓ Turismo Comunitário</li>
+                        </ul>
+                        <div class="sponsor-contact">
+                            <span class="contact-info">www.amazoniagreenhotel.com</span>
+                        </div>
+                    </div>
+
+                    <div class="sponsor-card">
+                        <div class="sponsor-badge">Certificado Verde</div>
+                        <div class="sponsor-logo">
+                            <div class="logo-placeholder">
+                                <svg viewBox="0 0 100 100" class="logo-icon">
+                                    <path d="M50 10 L70 40 L90 40 L65 60 L75 90 L50 70 L25 90 L35 60 L10 40 L30 40 Z" fill="#10b981"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h4 class="sponsor-name">Pousada Raízes</h4>
+                        <p class="sponsor-description">
+                            Pousada familiar com gestão de resíduos exemplar e horta orgânica própria. 
+                            Experiência autêntica e sustentável.
+                        </p>
+                        <ul class="sponsor-features">
+                            <li>✓ Horta Orgânica</li>
+                            <li>✓ Compostagem</li>
+                            <li>✓ Cultura Local</li>
+                        </ul>
+                        <div class="sponsor-contact">
+                            <span class="contact-info">www.pousadaraizes.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tourism Agencies -->
+            <div class="sponsor-category">
+                <h3 class="category-title">
+                    <span class="category-icon">🌿</span>
+                    Agências de Turismo
+                </h3>
+                <div class="sponsors-grid">
+                    <div class="sponsor-card">
+                        <div class="sponsor-badge">Turismo Responsável</div>
+                        <div class="sponsor-logo">
+                            <div class="logo-placeholder">
+                                <svg viewBox="0 0 100 100" class="logo-icon">
+                                    <path d="M50 10 Q30 30 30 50 Q30 70 50 90 Q70 70 70 50 Q70 30 50 10" fill="#059669"/>
+                                    <circle cx="50" cy="45" r="10" fill="white"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h4 class="sponsor-name">Trilhas Verdes Turismo</h4>
+                        <p class="sponsor-description">
+                            Especializada em ecoturismo e turismo de aventura com baixo impacto ambiental. 
+                            Roteiros exclusivos pela Amazônia.
+                        </p>
+                        <ul class="sponsor-features">
+                            <li>✓ Guias Especializados</li>
+                            <li>✓ Grupos Pequenos</li>
+                            <li>✓ Impacto Mínimo</li>
+                        </ul>
+                        <div class="sponsor-contact">
+                            <span class="contact-info">www.trilhasverdes.com</span>
+                        </div>
+                    </div>
+
+                    <div class="sponsor-card">
+                        <div class="sponsor-badge">Turismo Responsável</div>
+                        <div class="sponsor-logo">
+                            <div class="logo-placeholder">
+                                <svg viewBox="0 0 100 100" class="logo-icon">
+                                    <circle cx="50" cy="50" r="35" fill="none" stroke="#10b981" stroke-width="5"/>
+                                    <path d="M50 25 L50 50 L65 65" stroke="#10b981" stroke-width="4" fill="none"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h4 class="sponsor-name">Expedições Sustentáveis</h4>
+                        <p class="sponsor-description">
+                            Operadora focada em turismo científico e observação da natureza. 
+                            Parceria com comunidades locais.
+                        </p>
+                        <ul class="sponsor-features">
+                            <li>✓ Turismo Científico</li>
+                            <li>✓ Observação de Fauna</li>
+                            <li>✓ Apoio Comunitário</li>
+                        </ul>
+                        <div class="sponsor-contact">
+                            <span class="contact-info">www.expedicoes.com</span>
+                        </div>
+                    </div>
+
+                    <div class="sponsor-card">
+                        <div class="sponsor-badge">Turismo Responsável</div>
+                        <div class="sponsor-logo">
+                            <div class="logo-placeholder">
+                                <svg viewBox="0 0 100 100" class="logo-icon">
+                                    <path d="M30 70 Q50 40 70 70" stroke="#059669" stroke-width="5" fill="none"/>
+                                    <circle cx="35" cy="65" r="8" fill="#10b981"/>
+                                    <circle cx="50" cy="45" r="8" fill="#10b981"/>
+                                    <circle cx="65" cy="65" r="8" fill="#10b981"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h4 class="sponsor-name">Natureza Viva Tours</h4>
+                        <p class="sponsor-description">
+                            Roteiros personalizados com foco em educação ambiental e vivências 
+                            culturais autênticas.
+                        </p>
+                        <ul class="sponsor-features">
+                            <li>✓ Educação Ambiental</li>
+                            <li>✓ Vivências Culturais</li>
+                            <li>✓ Roteiros Personalizados</li>
+                        </ul>
+                        <div class="sponsor-contact">
+                            <span class="contact-info">www.naturezaviva.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transport & Services -->
+            <div class="sponsor-category">
+                <h3 class="category-title">
+                    <span class="category-icon">🚗</span>
+                    Transporte & Serviços
+                </h3>
+                <div class="sponsors-grid">
+                    <div class="sponsor-card">
+                        <div class="sponsor-badge">Mobilidade Verde</div>
+                        <div class="sponsor-logo">
+                            <div class="logo-placeholder">
+                                <svg viewBox="0 0 100 100" class="logo-icon">
+                                    <rect x="25" y="40" width="50" height="30" fill="#10b981" rx="5"/>
+                                    <circle cx="35" cy="75" r="8" fill="#059669"/>
+                                    <circle cx="65" cy="75" r="8" fill="#059669"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h4 class="sponsor-name">EcoTransfer</h4>
+                        <p class="sponsor-description">
+                            Frota 100% elétrica para transfers e passeios. Conforto e sustentabilidade 
+                            em cada viagem.
+                        </p>
+                        <ul class="sponsor-features">
+                            <li>✓ Veículos Elétricos</li>
+                            <li>✓ Motoristas Treinados</li>
+                            <li>✓ Conforto Premium</li>
+                        </ul>
+                        <div class="sponsor-contact">
+                            <span class="contact-info">www.ecotransfer.com</span>
+                        </div>
+                    </div>
+
+                    <div class="sponsor-card">
+                        <div class="sponsor-badge">Gastronomia Sustentável</div>
+                        <div class="sponsor-logo">
+                            <div class="logo-placeholder">
+                                <svg viewBox="0 0 100 100" class="logo-icon">
+                                    <circle cx="50" cy="50" r="30" fill="#059669"/>
+                                    <path d="M40 50 L50 60 L70 40" stroke="white" stroke-width="4" fill="none"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h4 class="sponsor-name">Sabores da Floresta</h4>
+                        <p class="sponsor-description">
+                            Restaurante com ingredientes 100% orgânicos e regionais. Valorização 
+                            da culinária amazônica.
+                        </p>
+                        <ul class="sponsor-features">
+                            <li>✓ Ingredientes Orgânicos</li>
+                            <li>✓ Produtores Locais</li>
+                            <li>✓ Culinária Regional</li>
+                        </ul>
+                        <div class="sponsor-contact">
+                            <span class="contact-info">www.saboresdafloresta.com</span>
+                        </div>
+                    </div>
+
+                    <div class="sponsor-card">
+                        <div class="sponsor-badge">Experiências Verdes</div>
+                        <div class="sponsor-logo">
+                            <div class="logo-placeholder">
+                                <svg viewBox="0 0 100 100" class="logo-icon">
+                                    <path d="M50 20 L60 45 L85 45 L65 60 L75 85 L50 70 L25 85 L35 60 L15 45 L40 45 Z" fill="#10b981"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h4 class="sponsor-name">Aventura Consciente</h4>
+                        <p class="sponsor-description">
+                            Atividades de aventura com equipamentos sustentáveis e práticas de 
+                            mínimo impacto ambiental.
+                        </p>
+                        <ul class="sponsor-features">
+                            <li>✓ Equipamentos Eco-friendly</li>
+                            <li>✓ Segurança Certificada</li>
+                            <li>✓ Instrutores Qualificados</li>
+                        </ul>
+                        <div class="sponsor-contact">
+                            <span class="contact-info">www.aventuraconsciente.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commitment Section -->
+    <section class="commitment">
+        <div class="container">
+            <div class="commitment-content">
+                <h2 class="commitment-title">Nosso Compromisso com a COP30</h2>
+                <div class="commitment-grid">
+                    <div class="commitment-item">
+                        <div class="commitment-icon">🌱</div>
+                        <h3>Neutralidade de Carbono</h3>
+                        <p>Todas as operações compensam 100% das emissões de CO₂</p>
+                    </div>
+                    <div class="commitment-item">
+                        <div class="commitment-icon">♻️</div>
+                        <h3>Economia Circular</h3>
+                        <p>Redução, reutilização e reciclagem em todos os processos</p>
+                    </div>
+                    <div class="commitment-item">
+                        <div class="commitment-icon">🤝</div>
+                        <h3>Desenvolvimento Local</h3>
+                        <p>Geração de renda e valorização das comunidades</p>
+                    </div>
+                    <div class="commitment-item">
+                        <div class="commitment-icon">🌳</div>
+                        <h3>Preservação</h3>
+                        <p>Proteção ativa de áreas naturais e biodiversidade</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Faça Parte Desta Transformação</h2>
+                <p class="cta-text">
+                    Escolha parceiros comprometidos com o futuro do planeta. 
+                    Turismo sustentável é o caminho para preservar nossas riquezas naturais.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#sponsors" class="btn btn-primary">Conheça os Patrocinadores</a>
+                    <a href="#" class="btn btn-secondary">Saiba Mais sobre COP30</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <svg viewBox="0 0 200 80" class="footer-logo-svg">
+                            <text x="10" y="50" class="footer-logo-text">COP30</text>
+                        </svg>
+                    </div>
+                    <p class="footer-tagline">Turismo Sustentável para um Futuro Verde</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Contato</h4>
+                    <p class="footer-text">info@cop30turismo.com</p>
+                    <p class="footer-text">Belém - Pará - Brasil</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Sobre</h4>
+                    <p class="footer-text">Programa oficial de patrocinadores da COP30</p>
+                    <p class="footer-text">Compromisso com sustentabilidade</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 COP30 - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+            anchor.addEventListener("click", function (e) {
+                e.preventDefault()
+                const target = document.querySelector(this.getAttribute("href"))
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                    })
+                }
+            })
+        })
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px",
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1"
+                    entry.target.style.transform = "translateY(0)"
+                }
+            })
+        }, observerOptions)
+
+        // Observe all sponsor cards and stat cards
+        document.addEventListener("DOMContentLoaded", () => {
+            const cards = document.querySelectorAll(".sponsor-card, .stat-card, .commitment-item")
+
+            cards.forEach((card, index) => {
+                card.style.opacity = "0"
+                card.style.transform = "translateY(30px)"
+                card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`
+                observer.observe(card)
+            })
+
+            // Parallax effect for hero
+            window.addEventListener("scroll", () => {
+                const scrolled = window.pageYOffset
+                const hero = document.querySelector(".hero-content")
+                if (hero) {
+                    hero.style.transform = `translateY(${scrolled * 0.5}px)`
+                    hero.style.opacity = 1 - scrolled / 600
+                }
+            })
+
+            // Add hover effect to sponsor cards
+            const sponsorCards = document.querySelectorAll(".sponsor-card")
+            sponsorCards.forEach((card) => {
+                card.addEventListener("mouseenter", function () {
+                    this.style.borderColor = "var(--color-primary)"
+                })
+
+                card.addEventListener("mouseleave", function () {
+                    this.style.borderColor = "var(--color-border)"
+                })
+            })
+
+            // Animate numbers in stats section
+            const animateNumbers = () => {
+                const statNumbers = document.querySelectorAll(".stat-number")
+
+                statNumbers.forEach((stat) => {
+                    const text = stat.textContent
+                    const hasPercent = text.includes("%")
+                    const hasPlus = text.includes("+")
+                    const number = Number.parseInt(text.replace(/\D/g, ""))
+
+                    let current = 0
+                    const increment = number / 50
+                    const timer = setInterval(() => {
+                        current += increment
+                        if (current >= number) {
+                            current = number
+                            clearInterval(timer)
+                        }
+
+                        let displayText = Math.floor(current).toString()
+                        if (hasPercent) displayText += "%"
+                        if (hasPlus) displayText += "+"
+
+                        stat.textContent = displayText
+                    }, 30)
+                })
+            }
+
+            // Trigger number animation when stats section is visible
+            const statsSection = document.querySelector(".stats")
+            if (statsSection) {
+                const statsObserver = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                animateNumbers()
+                                statsObserver.unobserve(entry.target)
+                            }
+                        })
+                    },
+                    { threshold: 0.5 },
+                )
+
+                statsObserver.observe(statsSection)
+            }
+        })
+
+        // Add loading animation
+        window.addEventListener("load", () => {
+            document.body.style.opacity = "0"
+            setTimeout(() => {
+                document.body.style.transition = "opacity 0.5s ease"
+                document.body.style.opacity = "1"
+            }, 100)
+        })
+    </script>
+</body>
+</html>
