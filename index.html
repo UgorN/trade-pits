@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patrocinadores COP30 - Turismo Sustentável</title>
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Parceiros COP30 - COP30 NA AMAZÔNIA</title>
+<style>
         /* Reset & Base Styles */
         * {
             margin: 0;
@@ -632,7 +633,275 @@
             .section-title { font-size: 1.75rem; }
             .stat-number { font-size: 2.5rem; }
         }
-    </style>
+    
+/* === Partners (Realização/Apoio) Section === */
+.partners-wrapper {
+  background: var(--bg);
+  padding: 48px 16px;
+}
+.partners-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.partners-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 16px 0 12px 4px;
+}
+.partner-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(120px,1fr));
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+  padding: 16px 0 8px;
+}
+.partner-item {
+  width: 100%;
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  padding: 12px;
+}
+.partner-item:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 10px 24px rgba(31,41,55,0.16);
+}
+.partner-item a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.partner-item img {
+  width: 100%;
+  height: 56px;
+  object-fit: contain;
+}
+.partners-section + .partners-section { margin-top: 12px; }
+@media (max-width: 1024px) {
+  .partner-grid { grid-template-columns: repeat(3, minmax(120px,1fr)); }
+}
+@media (max-width: 640px) {
+  .partner-grid { grid-template-columns: repeat(2, minmax(120px,1fr)); }
+  .partner-item img { height: 48px; }
+}
+
+
+/* === Partners (Realização/Apoio) – v2 === */
+.partners-wrapper{
+  background: linear-gradient(180deg, var(--bg), #ffffff);
+  padding: 56px 16px;
+}
+.partners-container{ max-width: 1280px; margin: 0 auto; }
+.partners-heading{ display:flex; align-items:center; gap:16px; margin: 8px 4px 14px; }
+.heading-pill{
+  display:inline-block;
+  padding: 8px 14px;
+  font-weight: 800;
+  letter-spacing:.04em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  background: rgba(16,185,129,.12);
+  color: var(--text);
+  border: 1px solid rgba(16,185,129,.35);
+}
+.heading-rule{
+  height: 2px;
+  flex:1;
+  background: linear-gradient(90deg, rgba(16,185,129,.6), rgba(16,185,129,0));
+  border-radius: 2px;
+}
+.partner-grid{
+  display:grid;
+  grid-template-columns: repeat(4, minmax(160px,1fr));
+  gap: 28px;
+  align-items:center;
+  justify-items:center;
+}
+.partner-grid-single{ grid-template-columns: repeat(1, minmax(220px, 1fr)); }
+.partner-item{
+  width:100%;
+  min-height: 128px;
+  display:flex; align-items:center; justify-content:center;
+  background: var(--surface);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.08);
+  transition: transform .2s ease, box-shadow .2s ease;
+  padding: 16px;
+}
+.partner-item:hover{ transform: translateY(-4px); box-shadow: 0 14px 32px rgba(0,0,0,.12); }
+.partner-item a{display:flex; align-items:center; justify-content:center; width:100%; height:100%;}
+.partner-item img{
+  height: 96px; /* tamanho maior e uniforme */
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  filter: none;
+}
+@media (max-width: 1024px){
+  .partner-grid{ grid-template-columns: repeat(3, minmax(140px,1fr)); }
+  .partner-item{ min-height: 112px; }
+  .partner-item img{ height: 84px; }
+}
+@media (max-width: 640px){
+  .partner-grid{ grid-template-columns: repeat(2, minmax(140px,1fr)); gap: 18px; }
+  .partner-item{ min-height: 96px; padding: 12px; }
+  .partner-item img{ height: 72px; }
+}
+
+
+/* === Título Parceiros Locais === */
+.local-partners-title{
+  width:100%;
+  text-align:center;
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  margin: 28px 0 10px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #064e3b, #059669, #10b981, #34d399);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: partnersShimmer 8s linear infinite;
+}
+@keyframes partnersShimmer{
+  0%{ background-position: 0% 50%; }
+  100%{ background-position: 200% 50%; }
+}
+
+
+/* === Mapa Turístico de Belém (PDF) === */
+.mapa-belem-wrapper{
+  padding: 48px 16px;
+  background: linear-gradient(180deg, var(--bg), #fff);
+}
+.mapa-container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.mapa-title{
+  font-size: clamp(1.4rem, 2.6vw, 2rem);
+  font-weight: 800;
+  text-align: center;
+  margin: 0 0 18px;
+  letter-spacing: .02em;
+  color: var(--text);
+}
+.mapa-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.mapa-page{
+  width: 100%;
+  height: 75vh; /* ocupa boa parte da janela e se adapta */
+  min-height: 520px;
+  border: none;
+  background: var(--surface);
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.10);
+}
+.mapa-actions{
+  display:flex; gap:12px; justify-content:center; margin-top:16px;
+}
+.btn-download, .btn-open{
+  display:inline-block;
+  padding: 12px 18px;
+  border-radius: 999px;
+  text-decoration:none;
+  font-weight: 700;
+  letter-spacing:.02em;
+  transition: transform .15s ease, box-shadow .2s ease, background .2s ease;
+  background: #10b981;
+  color: white;
+  box-shadow: 0 6px 16px rgba(16,185,129,.35);
+}
+.btn-open{ background:#059669; }
+.btn-download:hover, .btn-open:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(16,185,129,.35);
+}
+@media (max-width: 900px){
+  .mapa-grid{ grid-template-columns: 1fr; }
+  .mapa-page{ height: 65vh; min-height: 420px; }
+}
+
+
+/* === Botão de Mapa Turístico Simplificado === */
+.mapa-belem-wrapper{
+  background: linear-gradient(180deg, #ffffff, #f0fdf4);
+  padding: 60px 16px 20px;
+  text-align: center;
+}
+.mapa-container{ max-width: 1200px; margin: 0 auto; }
+.btn-download-large{
+  display: inline-block;
+  font-family: 'Poppins', system-ui, sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  padding: 20px 36px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(90deg, #059669, #10b981, #34d399);
+  background-size: 200% 100%;
+  animation: gradientSlide 8s linear infinite;
+  box-shadow: 0 8px 20px rgba(16,185,129,.35);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.btn-download-large:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(16,185,129,.45);
+}
+@keyframes gradientSlide{
+  0%{ background-position: 0% 50%; }
+  100%{ background-position: 200% 50%; }
+}
+
+
+/* === Botão do Mapa Turístico (posicionado antes do Compromisso) – v6 === */
+.mapa-belem-wrapper{
+  background: transparent !important;
+  padding: 16px 0 8px;
+  text-align: center;
+}
+.mapa-container{ max-width: 1200px; margin: 0 auto; }
+.mapa-inline{ display:flex; justify-content:center; }
+.btn-download-large{
+  display:inline-block;
+  font-family: 'Poppins', system-ui, sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.1rem, 2.2vw, 1.6rem);
+  padding: 16px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(90deg, #059669, #10b981, #34d399);
+  background-size: 200% 100%;
+  animation: gradientSlide 8s linear infinite;
+  box-shadow: 0 8px 20px rgba(16,185,129,.30);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.btn-download-large:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(16,185,129,.40);
+}
+@keyframes gradientSlide{
+  0%{ background-position: 0% 50%; }
+  100%{ background-position: 200% 50%; }
+}
+
+</style>
 <style id="cards-v2-critical">
 
 /* === CRITICAL: Cards v2 inline fallback === */
@@ -676,7 +945,6 @@
 }
 
 </style>
-
 <style id="i18n-v7-critical">
 .lang-switcher{
   position: fixed; top: 12px; right: 16px; z-index: 1200;
@@ -696,8 +964,6 @@ footer.credits-green .credits-right{ display:flex; flex-wrap:wrap; gap:14px; ali
 footer.credits-green .credits-note{ text-align:center; padding:10px 16px; font-size:.9rem; color:#eafaf4; opacity:.92; border-top:1px solid rgba(255,255,255,.2); }
 @media (max-width:720px){ footer.credits-green .credits-inner{ flex-direction:column; align-items:flex-start; } }
 </style>
-
-
 <style id="footer-v8-fix">
 .site-footer, .footer {
   background: linear-gradient(135deg, #064e3b, #065f46);
@@ -708,14 +974,376 @@ footer.credits-green .credits-note{ text-align:center; padding:10px 16px; font-s
 footer.credits-green { margin-top: 0; }
 hr, .footer-divider { display:none !important; }
 </style>
+<style>
+.brand-strip{background:linear-gradient(180deg,rgba(255,255,255,.6),rgba(255,255,255,0));padding:18px 0}
+.brand-strip-inner{max-width:1200px;margin:0 auto;padding:0 16px;display:grid;gap:12px}
+.brand-group{display:flex;align-items:center;flex-wrap:wrap;gap:16px}
+.brand-label{font-weight:700;color:#0e5c47;margin-right:6px}
+.brand{display:inline-flex;align-items:center;justify-content:center;padding:6px 10px;border-radius:10px;background:rgba(255,255,255,.65);transition:transform .2s ease,box-shadow .2s ease}
+.brand img{height:32px;width:auto;display:block}
+.brand:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.08)}
+@media(min-width:900px){.brand img{height:38px}}
+.mapa-guia .container{max-width:1100px;margin:0 auto;padding:40px 16px 60px}
+.mapa-guia .section-title{text-align:center;margin-bottom:6px}
+.mapa-guia .section-subtitle{text-align:center;color:#4b6b66;margin-bottom:24px}
+.mapa-wrapper{border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+.mapa-embed{width:100%;height:680px;display:block;border:none}
+.mapa-actions{display:flex;gap:12px;justify-content:center;margin-top:16px}
+.btn.btn-ghost{background:transparent;border:1px solid rgba(0,0,0,.15)}
+</style>
+<style>
+.brand-strip{background:linear-gradient(180deg,rgba(255,255,255,.9),rgba(255,255,255,0));padding:22px 0}
+.brand-strip-inner{max-width:1200px;margin:0 auto;padding:0 16px;display:grid;gap:12px}
+.brand-group{display:flex;align-items:center;flex-wrap:wrap;gap:22px}
+.brand-label{font-weight:800;color:#0e5c47;margin-right:8px}
+.brand{display:inline-flex;align-items:center;justify-content:center;padding:8px 12px;border-radius:12px;background:rgba(255,255,255,.9);transition:transform .2s ease,box-shadow .2s ease}
+.brand img{height:54px;width:auto;display:block}
+.brand:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.08)}
+@media(min-width:900px){.brand img{height:64px}}
 
-</head>
+.mapa-guia .container{max-width:1100px;margin:0 auto;padding:40px 16px 60px}
+.mapa-guia .section-title{text-align:center;margin-bottom:6px}
+.mapa-guia .section-subtitle{text-align:center;color:#4b6b66;margin-bottom:24px}
+.mapa-gallery{display:grid;grid-template-columns:1fr;gap:16px;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.08);background:#0e5c4712;padding:12px}
+.mapa-gallery img{width:100%;height:auto;display:block;border-radius:12px}
+.mapa-actions{display:flex;gap:12px;justify-content:center;margin-top:16px}
+.btn.btn-ghost{background:transparent;border:1px solid rgba(0,0,0,.15)}
+</style>
+<style>
+.brand-strip{background:linear-gradient(180deg,rgba(255,255,255,1),rgba(255,255,255,0));padding:28px 0}
+.brand-strip-inner{max-width:1200px;margin:0 auto;padding:0 16px;display:grid;gap:16px}
+.brand-group{display:flex;align-items:center;flex-wrap:wrap;gap:28px}
+.brand-label{font-weight:900;color:#0e5c47;margin-right:10px}
+.brand{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:14px;background:rgba(255,255,255,.95);transition:transform .2s ease,box-shadow .2s ease}
+.brand img{height:80px;width:auto;display:block}
+.brand:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.1)}
+@media(min-width:1100px){.brand img{height:96px}}
+</style>
+<style>
+.brand-strip--wide{padding:26px 0 10px}
+.brand-strip--wide .brand-line{display:flex;align-items:center;gap:28px;flex-wrap:wrap;margin-bottom:12px}
+.brand-strip--wide .brand-label{min-width:120px}
+.brand{background:transparent !important; padding:4px 10px}
+.brand img{height:80px}
+.brand--big img{height:92px}
+@media(min-width:1100px){.brand img{height:90px}.brand--big img{height:110px}}
+</style>
+<style>
+/* --- PITS v16: institucional e logos, KPIs removidos --- */
+.kpi-section,#kpis,.metrics,.stats,.kpis,.numbers,.highlights{display:none!important;}
+.section-institucional{background:linear-gradient(135deg,#0f8f63 0%,#0f6f63 100%);padding:36px 0;margin:0 auto;}
+.institucional-wrap{max-width:1100px;margin:0 auto;padding:0 20px;}
+.inst-label{font-weight:700;letter-spacing:.02em;margin:10px 0 8px 6px;color:#e6fff5;opacity:.9}
+.logo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:center;justify-items:center}
+.logo-pill{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(6px);
+           padding:14px 18px;border-radius:16px;width:100%;height:88px;display:flex;align-items:center;justify-content:center}
+.logo-pill img{max-height:64px;max-width:100%;height:auto;width:auto;object-fit:contain;filter:drop-shadow(0 1px 1px rgba(0,0,0,.15));}
+.logo-duo{display:flex;gap:12px;align-items:center;justify-content:center}
+@media (min-width:1024px){
+  .logo-grid{grid-template-columns:repeat(5,1fr);gap:22px}
+  .logo-pill{height:100px}
+  .logo-pill img{max-height:72px}
+}
+</style></head>
 <body>
+<div aria-label="Language switch" class="lang-switcher glass">
+<button class="flag active" data-lang="pt" title="Português (Brasil)"><img alt="Português (Brasil)" src="https://flagcdn.com/w40/br.png"/></button>
+<button class="flag" data-lang="en" title="English"><img alt="English" src="https://flagcdn.com/w40/us.png"/></button>
+<button class="flag" data-lang="es" title="Español"><img alt="Español" src="https://flagcdn.com/w40/es.png"/></button>
+</div>
+<!-- Hero Section -->
+<header class="hero">
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<div class="logo-cop30">
+<svg class="cop30-logo" viewbox="0 0 200 80">
+<text class="logo-text" x="10" y="60">COP30</text>
+</svg>
+</div>
+<h1 class="hero-title" data-i18n-en="Sustainable Tourism" data-i18n-es="Turismo Sostenible" data-i18n-pt="COP30 NA AMAZÔNIA">COP30 NA AMAZÔNIA</h1>
+<p class="hero-subtitle" data-i18n-en="Discover our partners committed to the planet’s future" data-i18n-es="Conozca a nuestros socios comprometidos con el futuro del planeta" data-i18n-pt="Empresas de Turismo Local">Empresas de Turismo Local</p>
+<div class="leaf-decoration">
+<div class="leaf leaf-1"></div>
+<div class="leaf leaf-2"></div>
+<div class="leaf leaf-3"></div>
+</div>
+</div>
+<div class="scroll-indicator">
+<div class="scroll-arrow"></div>
+</div>
+</header>
 
-<div class="lang-switcher glass" aria-label="Language switch">
-  <button data-lang="pt" class="flag active" title="Português (Brasil)"><img src="https://flagcdn.com/w40/br.png" alt="Português (Brasil)"></button>
-  <button data-lang="en" class="flag" title="English"><img src="https://flagcdn.com/w40/us.png" alt="English"></button>
-  <button data-lang="es" class="flag" title="Español"><img src="https://flagcdn.com/w40/es.png" alt="Español"></button>
+
+<section class="partners-wrapper" id="parceiros-institucionais">
+  <div class="partners-container">
+    <div class="partners-section">
+      <div class="partners-heading">
+        <span class="heading-pill">Realização</span>
+        <div class="heading-rule"></div>
+      </div>
+      <div class="partner-grid">
+        <div class="partner-item">
+          <a href="https://embratur.com.br/" target="_blank" rel="noopener">
+            <img src="assets/img/brands/embratur.png" alt="Embratur"/>
+          </a>
+        </div>
+        <div class="partner-item">
+          <a href="https://www.setur.pa.gov.br/" target="_blank" rel="noopener">
+            <img src="assets/img/brands/setur.png" alt="SETUR Pará"/>
+          </a>
+        </div>
+        <div class="partner-item">
+          <a href="https://www.gov.br/turismo/pt-br" target="_blank" rel="noopener">
+            <img src="assets/img/brands/mtur.png" alt="Ministério do Turismo"/>
+          </a>
+        </div>
+        <div class="partner-item">
+          <a href="https://semcult.belem.pa.gov.br/" target="_blank" rel="noopener">
+            <img src="assets/img/brands/semcult.png" alt="SEMCULT Belém"/>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="partners-section">
+      <div class="partners-heading">
+        <span class="heading-pill">Apoio</span>
+        <div class="heading-rule"></div>
+      </div>
+      <div class="partner-grid partner-grid-single">
+        <div class="partner-item">
+          <a href="https://pa.equatorialenergia.com.br/novosite" target="_blank" rel="noopener">
+            <img src="assets/img/brands/equatorial.png" alt="Equatorial Energia"/>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Sponsors Section -->
+<section class="sponsors" id="conteudo">
+<div class="sponsor-category" id="guias">
+<div class="local-partners-title" data-i18n-en="Local Partners" data-i18n-es="Socios Locales" data-i18n-pt="Parceiros Locais">Parceiros Locais</div>
+
+<h3 class="category-title"><span class="category-icon">🧭</span> <span data-i18n-en="Tourist Guides" data-i18n-es="Guías Turísticos" data-i18n-pt="Guias de Turismo">Guias de Turismo</span></h3>
+<div class="cards-grid">
+<article class="card" data-i18n-scope="card">
+<div class="card-media"><img alt="Analice Mota" class="card-img" src="assets/img/analice-mota.jpeg"/></div>
+<div class="card-body">
+<div class="card-badge" data-i18n-en="Tourist Guide" data-i18n-es="Guía Turístico" data-i18n-pt="Guia de Turismo">Guia de Turismo</div>
+<h4 class="card-title">Analice Mota</h4>
+<p class="card-desc" data-desc-en="Analice Mota offers tailor‑made itineraries in Belém and surroundings — Combu Island. With safety, warm hosting and local insider tips, every tour becomes an authentic Amazon experience. Perfect for travellers into culture, nature and photography." data-desc-es="Analice Mota ofrece recorridos personalizados en Belém y alrededores — Isla de Combu. Con seguridad, cercanía y consejos locales, cada paseo se vuelve una auténtica experiencia amazónica. Ideal para quienes buscan cultura, naturaleza y fotografía." data-desc-pt="Analice Mota oferece roteiros personalizados em Belém e arredores — Ilha do Combu. Com acolhimento, segurança e dicas locais, cada passeio vira uma experiência amazônica autêntica. Perfeito para quem busca cultura, natureza e fotografia.">Analice Mota oferece roteiros personalizados em Belém e arredores — Ilha do Combu. Com acolhimento, segurança e dicas locais, cada passeio vira uma experiência amazônica autêntica. Perfeito para quem busca cultura, natureza e fotografia.</p>
+<div class="card-actions"><a class="chip" href="tel:91988055425" rel="noopener" target="_blank"><svg height="18" viewbox="0 0 24 24" width="18"><path d="M6.6 10.8a15.9 15.9 0 006.6 6.6l2.2-2.2a1 1 0 011.1-.2c1.2.5 2.6.8 4 .8a1 1 0 011 1V20a1 1 0 01-1 1C11 21 3 13 3 4a1 1 0 011-1h3.2a1 1 0 011 1c0 1.4.3 2.8.8 4a1 1 0 01-.2 1.1l-2.2 2.2z" fill="currentColor"></path></svg><span>91988055425</span></a></div>
+</div>
+</article>
+<article class="card" data-i18n-scope="card">
+<div class="card-media"><img alt="Andreza De Oliveira Lima" class="card-img" src="assets/img/andreza-de-oliveira-lima.jpeg"/></div>
+<div class="card-body">
+<div class="card-badge" data-i18n-en="Tourist Guide" data-i18n-es="Guía Turístico" data-i18n-pt="Guia de Turismo">Guia de Turismo</div>
+<h4 class="card-title">Andreza De Oliveira Lima</h4>
+<p class="card-desc" data-desc-en="Andreza De Oliveira Lima offers tailor‑made itineraries in Belém and surroundings — nature experiences. With safety, warm hosting and local insider tips, every tour becomes an authentic Amazon experience. Perfect for travellers into culture, nature and photography." data-desc-es="Andreza De Oliveira Lima ofrece recorridos personalizados en Belém y alrededores — experiencias en la naturaleza. Con seguridad, cercanía y consejos locales, cada paseo se vuelve una auténtica experiencia amazónica. Ideal para quienes buscan cultura, naturaleza y fotografía." data-desc-pt="Andreza De Oliveira Lima oferece roteiros personalizados em Belém e arredores — experiências na natureza. Com acolhimento, segurança e dicas locais, cada passeio vira uma experiência amazônica autêntica. Perfeito para quem busca cultura, natureza e fotografia.">Andreza De Oliveira Lima oferece roteiros personalizados em Belém e arredores — experiências na natureza. Com acolhimento, segurança e dicas locais, cada passeio vira uma experiência amazônica autêntica. Perfeito para quem busca cultura, natureza e fotografia.</p>
+<div class="card-actions"><a class="chip" href="https://www.instagram.com/andrezaguiapirabas?igsh=b2o1aGR5eW83ODAz&amp;utm_source=qr" rel="noopener" target="_blank"><svg height="18" viewbox="0 0 24 24" width="18"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm0 2h10c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3zm11 1.5a1.5 1.5 0 100 3 1.5 1.5 0 000-3zM12 7a5 5 0 100 10 5 5 0 000-10z" fill="currentColor"></path></svg><span>Instagram</span></a><a class="chip" href="tel:91982849881" rel="noopener" target="_blank"><svg height="18" viewbox="0 0 24 24" width="18"><path d="M6.6 10.8a15.9 15.9 0 006.6 6.6l2.2-2.2a1 1 0 011.1-.2c1.2.5 2.6.8 4 .8a1 1 0 011 1V20a1 1 0 01-1 1C11 21 3 13 3 4a1 1 0 011-1h3.2a1 1 0 011 1c0 1.4.3 2.8.8 4a1 1 0 01-.2 1.1l-2.2 2.2z" fill="currentColor"></path></svg><span>91982849881</span></a><a class="chip" href="mailto:andrezaguiapirabas@gmail.com" rel="noopener" target="_blank"><svg aria-hidden="true" height="18" viewbox="0 0 24 24" width="18"><path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm0 2v.5l8 5 8-5V6H4zm16 12V9.2l-8 5-8-5V18h16z" fill="currentColor"></path></svg><span>Email</span></a><span class="chip muted"><svg height="18" viewbox="0 0 24 24" width="18"><path d="M3 4h18v16H3z" fill="currentColor"></path></svg><span>CADASTUR 14.126343.54-0</span></span></div>
+</div>
+</article>
+<article class="card" data-i18n-scope="card">
+<div class="card-media"><img alt="Carla Leite" class="card-img" src="assets/img/carla-leite.jpg"/></div>
+<div class="card-body">
+<div class="card-badge" data-i18n-en="Tourist Guide" data-i18n-es="Guía Turístico" data-i18n-pt="Guia de Turismo">Guia de Turismo</div>
+<h4 class="card-title">Carla Leite</h4>
+<p class="card-desc" data-desc-en="Carla Leite offers tailor‑made itineraries in Belém and surroundings — Combu Island. With safety, warm hosting and local insider tips, every tour becomes an authentic Amazon experience. Perfect for travellers into culture, nature and photography." data-desc-es="Carla Leite ofrece recorridos personalizados en Belém y alrededores — Isla de Combu. Con seguridad, cercanía y consejos locales, cada paseo se vuelve una auténtica experiencia amazónica. Ideal para quienes buscan cultura, naturaleza y fotografía." data-desc-pt="Carla Leite oferece roteiros personalizados em Belém e arredores — Ilha do Combu. Com acolhimento, segurança e dicas locais, cada passeio vira uma experiência amazônica autêntica. Perfeito para quem busca cultura, natureza e fotografia.">Carla Leite oferece roteiros personalizados em Belém e arredores — Ilha do Combu. Com acolhimento, segurança e dicas locais, cada passeio vira uma experiência amazônica autêntica. Perfeito para quem busca cultura, natureza e fotografia.</p>
+<div class="card-actions"><a class="chip" href="tel:996424488" rel="noopener" target="_blank"><svg height="18" viewbox="0 0 24 24" width="18"><path d="M6.6 10.8a15.9 15.9 0 006.6 6.6l2.2-2.2a1 1 0 011.1-.2c1.2.5 2.6.8 4 .8a1 1 0 011 1V20a1 1 0 01-1 1C11 21 3 13 3 4a1 1 0 011-1h3.2a1 1 0 011 1c0 1.4.3 2.8.8 4a1 1 0 01-.2 1.1l-2.2 2.2z" fill="currentColor"></path></svg><span>996424488</span></a><a class="chip" href="mailto:cc.leite@yahoo.com.br" rel="noopener" target="_blank"><svg aria-hidden="true" height="18" viewbox="0 0 24 24" width="18"><path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm0 2v.5l8 5 8-5V6H4zm16 12V9.2l-8 5-8-5V18h16z" fill="currentColor"></path></svg><span>Email</span></a></div>
+</div>
+</article>
+<article class="card" data-i18n-scope="card">
+<div class="card-media"><img alt="Cogtur/Pa (Cooperativa Dos Guias De Turismo Do Pará) Bem-Vindos À Cogtur Cooperativa Dos Guias De Turismo Do Par Á" class="card-img" src="assets/img/cogtur-pa-cooperativa-dos-guias-de-turismo-do-para-bem-vindos-a-cogtur-cooperativa-dos-guias-de-turismo-do-par-a.png"/></div>
+<div class="card-body">
+<div class="card-badge" data-i18n-en="Tourist Guide" data-i18n-es="Guía Turístico" data-i18n-pt="Guia de Turismo">Guia de Turismo</div>
+<h4 class="card-title">Cogtur/Pa (Cooperativa Dos Guias De Turismo Do Pará) Bem-Vindos À Cogtur Cooperativa Dos Guias De Turismo Do Par Á</h4>
+<p class="card-desc" data-desc-en="Cogtur/Pa (Cooperativa Dos Guias De Turismo Do Pará) Bem-Vindos À Cogtur Cooperativa Dos Guias De Turismo Do Par Á offers tailor‑made itineraries in Belém and surroundings. With safety, warm hosting and local insider tips, every tour becomes an authentic Amazon experience. Perfect for travellers into culture, nature and photography." data-desc-es="Cogtur/Pa (Cooperativa Dos Guias De Turismo Do Pará) Bem-Vindos À Cogtur Cooperativa Dos Guias De Turismo Do Par Á ofrece recorridos personalizados en Belém y alrededores. Con seguridad, cercanía y consejos locales, cada paseo se vuelve una auténtica experiencia amazónica. Ideal para quienes buscan cultura, naturaleza y fotografía." data-desc-pt="Cogtur/Pa (Cooperativa Dos Guias De Turismo Do Pará) Bem-Vindos À Cogtur Cooperativa Dos Guias De Turismo Do Par Á oferece roteiros personalizados em Belém e arredores. Com acolhimento, segurança e dicas locais, cada passeio vira uma experiência amazônica autêntica. Perfeito para quem busca cultura, natureza e fotografia.">Cogtur/Pa (Cooperativa Dos Guias De Turismo Do Pará) Bem-Vindos À Cogtur Cooperativa Dos Guias De Turismo Do Par Á oferece roteiros personalizados em Belém e arredores. Com acolhimento, segurança e dicas locais, cada passeio vira uma experiência amazônica autêntica. Perfeito para quem busca cultura, natureza e fotografia.</p>
+<div class="card-actions"><a class="chip" href="tel:91985295092" rel="noopener" target="_blank"><svg height="18" viewbox="0 0 24 24" width="18"><path d="M6.6 10.8a15.9 15.9 0 006.6 6.6l2.2-2.2a1 1 0 011.1-.2c1.2.5 2.6.8 4 .8a1 1 0 011 1V20a1 1 0 01-1 1C11 21 3 13 3 4a1 1 0 011-1h3.2a1 1 0 011 1c0 1.4.3 2.8.8 4a1 1 0 01-.2 1.1l-2.2 2.2z" fill="currentColor"></path></svg><span>(91) 985295092</span></a></div>
+</div>
+</article>
+<article class="card" data-i18n-scope="card">
+<div class="card-media"><img alt="Luizete Costa" class="card-img" src="assets/img/luizete-costa.jpg"/></div>
+<div class="card-body">
+<div class="card-badge" data-i18n-en="Tourist Guide" data-i18n-es="Guía Turístico" data-i18n-pt="Guia de Turismo">Guia de Turismo</div>
+<h4 class="card-title">Luizete Costa</h4>
+<p class="card-desc" data-desc-en="Luizete Costa offers tailor‑made itineraries in Belém and surroundings — nature experiences. With safety, warm hosting and local insider tips, every tour becomes an authentic Amazon experience. Perfect for travellers into culture, nature and photography." data-desc-es="Luizete Costa ofrece recorridos personalizados en Belém y alrededores — experiencias en la naturaleza. Con seguridad, cercanía y consejos locales, cada paseo se vuelve una auténtica experiencia amazónica. Ideal para quienes buscan cultura, naturaleza y fotografía." data-desc-pt="Luizete Costa oferece roteiros personalizados em Belém e arredores — experiências na natureza. Com acolhimento, segurança e dicas locais, cada passeio vira uma experiência amazônica autêntica. Perfeito para quem busca cultura, natureza e fotografia.">Luizete Costa oferece roteiros personalizados em Belém e arredores — experiências na natureza. Com acolhimento, segurança e dicas locais, cada passeio vira uma experiência amazônica autêntica. Perfeito para quem busca cultura, natureza e fotografia.</p>
+<div class="card-actions"><a class="chip" href="tel:91988055885" rel="noopener" target="_blank"><svg height="18" viewbox="0 0 24 24" width="18"><path d="M6.6 10.8a15.9 15.9 0 006.6 6.6l2.2-2.2a1 1 0 011.1-.2c1.2.5 2.6.8 4 .8a1 1 0 011 1V20a1 1 0 01-1 1C11 21 3 13 3 4a1 1 0 011-1h3.2a1 1 0 011 1c0 1.4.3 2.8.8 4a1 1 0 01-.2 1.1l-2.2 2.2z" fill="currentColor"></path></svg><span>91 98805-5885</span></a></div>
+</div>
+</article>
+<article class="card" data-i18n-scope="card">
+<div class="card-media"><img alt="Sara" class="card-img" src="assets/img/sara.png"/></div>
+<div class="card-body">
+<div class="card-badge" data-i18n-en="Tourist Guide" data-i18n-es="Guía Turístico" data-i18n-pt="Guia de Turismo">Guia de Turismo</div>
+<h4 class="card-title">Sara</h4>
+<p class="card-desc" data-desc-en="Sara offers tailor‑made itineraries in Belém and surroundings. With safety, warm hosting and local insider tips, every tour becomes an authentic Amazon experience. Perfect for travellers into culture, nature and photography." data-desc-es="Sara ofrece recorridos personalizados en Belém y alrededores. Con seguridad, cercanía y consejos locales, cada paseo se vuelve una auténtica experiencia amazónica. Ideal para quienes buscan cultura, naturaleza y fotografía." data-desc-pt="Sara oferece roteiros personalizados em Belém e arredores. Com acolhimento, segurança e dicas locais, cada passeio vira uma experiência amazônica autêntica. Perfeito para quem busca cultura, natureza e fotografia.">Sara oferece roteiros personalizados em Belém e arredores. Com acolhimento, segurança e dicas locais, cada passeio vira uma experiência amazônica autêntica. Perfeito para quem busca cultura, natureza e fotografia.</p>
+<div class="card-actions"><a class="chip" href="https://www.instagram.com/saraturexcursoes/" rel="noopener" target="_blank"><svg height="18" viewbox="0 0 24 24" width="18"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm0 2h10c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3zm11 1.5a1.5 1.5 0 100 3 1.5 1.5 0 000-3zM12 7a5 5 0 100 10 5 5 0 000-10z" fill="currentColor"></path></svg><span>Instagram</span></a><a class="chip" href="https://www.facebook.com/sara.amaral.599554/?locale=pt_BR" rel="noopener" target="_blank"><svg height="18" viewbox="0 0 24 24" width="18"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z" fill="currentColor"></path></svg><span>Site</span></a><a class="chip" href="tel:91983036346" rel="noopener" target="_blank"><svg height="18" viewbox="0 0 24 24" width="18"><path d="M6.6 10.8a15.9 15.9 0 006.6 6.6l2.2-2.2a1 1 0 011.1-.2c1.2.5 2.6.8 4 .8a1 1 0 011 1V20a1 1 0 01-1 1C11 21 3 13 3 4a1 1 0 011-1h3.2a1 1 0 011 1c0 1.4.3 2.8.8 4a1 1 0 01-.2 1.1l-2.2 2.2z" fill="currentColor"></path></svg><span>91 98303-6346</span></a></div>
+</div>
+</article>
+</div>
+</div>
+<div class="sponsor-category" id="parceiras">
+<h3 class="category-title"><span class="category-icon">🤝</span> <span data-i18n-en="Partner Companies" data-i18n-es="Empresas Asociadas" data-i18n-pt="Empresas Parceiras">Empresas Parceiras</span></h3>
+<div class="cards-grid">
+<article class="card" data-i18n-scope="card">
+<div class="card-media"><img alt="Saldosa Maloca Eco Restaurante" class="card-img" src="assets/img/saldosa-maloca-eco-restaurante-descricao-curta-ate-400-caracteres-no-coracao-da-ilha-do-combu.png"/></div>
+<div class="card-body">
+<div class="card-badge" data-i18n-en="Partner Company" data-i18n-es="Empresa Asociada" data-i18n-pt="Empresa Parceira">Empresa Parceira</div>
+<h4 class="card-title">Saldosa Maloca Eco Restaurante</h4>
+<p class="card-desc" data-desc-en="Experience the essence of Belém on Combu Island — regional cuisine, nature and warm Amazonian hospitality. Savour authentic flavours, enjoy the rainforest vibe and capture unforgettable moments by the rivers. Official PITS partner at COP30." data-desc-es="Te invita a vivir la esencia de Belém en la Isla de Combu — gastronomía regional, naturaleza y hospitalidad amazónica. Prueba sabores auténticos, disfruta el clima de la selva y guarda momentos inolvidables a orillas de los ríos. Socia oficial de los PITS en la COP30." data-desc-pt="Convida você a viver a essência de Belém na Ilha do Combu — gastronomia regional, natureza e hospitalidade paraense. Experimente sabores autênticos, aproveite o clima amazônico e registre momentos inesquecíveis à beira dos rios. Parceira oficial dos PITS na COP30.">Convida você a viver a essência de Belém na Ilha do Combu — gastronomia regional, natureza e hospitalidade paraense. Experimente sabores autênticos, aproveite o clima amazônico e registre momentos inesquecíveis à beira dos rios. Parceira oficial dos PITS na COP30.</p>
+<div class="card-actions"><a class="chip" href="tel:5591999823396" rel="noopener" target="_blank"><svg height="18" viewbox="0 0 24 24" width="18"><path d="M6.6 10.8a15.9 15.9 0 006.6 6.6l2.2-2.2a1 1 0 011.1-.2c1.2.5 2.6.8 4 .8a1 1 0 011 1V20a1 1 0 01-1 1C11 21 3 13 3 4a1 1 0 011-1h3.2a1 1 0 011 1c0 1.4.3 2.8.8 4a1 1 0 01-.2 1.1l-2.2 2.2z" fill="currentColor"></path></svg><span>55 (91) 99982-3396</span></a></div>
+</div>
+</article>
+<article class="card" data-i18n-scope="card">
+  <div class="card-media">
+    <img class="card-img" alt="Amazon Eco Expedition" src="assets/img/empresas-parceiras/amazon-eco-expedition-amazon-eco-expedition.png"/>
+  </div>
+  <div class="card-body">
+    <div class="card-badge" data-i18n-pt="Empresa Parceira" data-i18n-en="Partner Company" data-i18n-es="Empresa Asociada">Empresa Parceira</div>
+    <h4 class="card-title">Amazon Eco Expedition</h4>
+    <p class="card-desc" data-desc-pt="Somos referência em turismo receptivo no Estado do Pará, proporcionamos experiências únicas e autênticas na Amazônia, com um profundo compromisso profissional e o respeito à cultura local. Somos especializados em programas de ecoturismo e turismo de base comunitária, oferecendo aos visitantes uma imersão genuína nas tradições paraenses. Atuamos nas regiões de Belém, Ilha do Marajó e Alter do Chão." data-desc-en="Somos referência em turismo receptivo no Estado do Pará, proporcionamos experiências únicas e autênticas na Amazônia, com um profundo compromisso profissional e o respeito à cultura local. Somos especializados em programas de ecoturismo e turismo de base comunitária, oferecendo aos visitantes uma imersão genuína nas tradições paraenses. Atuamos nas regiões de Belém, Ilha do Marajó e Alter do Chão." data-desc-es="Somos referência em turismo receptivo no Estado do Pará, proporcionamos experiências únicas e autênticas na Amazônia, com um profundo compromisso profissional e o respeito à cultura local. Somos especializados em programas de ecoturismo e turismo de base comunitária, oferecendo aos visitantes uma imersão genuína nas tradições paraenses. Atuamos nas regiões de Belém, Ilha do Marajó e Alter do Chão.">Somos referência em turismo receptivo no Estado do Pará, proporcionamos experiências únicas e autênticas na Amazônia, com um profundo compromisso profissional e o respeito à cultura local. Somos especializados em programas de ecoturismo e turismo de base comunitária, oferecendo aos visitantes uma imersão genuína nas tradições paraenses. Atuamos nas regiões de Belém, Ilha do Marajó e Alter do Chão.</p>
+    <div class="card-actions"><a class="chip" href="https://www.amazonecoexpedition.com.br" target="_blank" rel="noopener"><span>🌐</span><span>Site</span></a><a class="chip" href="https://wa.me/9121217370" target="_blank" rel="noopener"><span>💬</span><span>WhatsApp</span></a><a class="chip" href="https://wa.me/91982732985" target="_blank" rel="noopener"><span>💬</span><span>WhatsApp</span></a><a class="chip" href="tel:61568118095635" target="_blank" rel="noopener"><span>📞</span><span>Telefone</span></a><a class="chip" href="https://www.instagram.com/amazonecoexpedition/" target="_blank" rel="noopener"><span>📷</span><span>Instagram</span></a><a class="chip" href="https://www.facebook.com/p/Amazon-Eco-Expedition-61568118095635/" target="_blank" rel="noopener"><span>📘</span><span>Facebook</span></a><a class="chip" href="https://www.tiktok.com/@amazonecoexpedition" target="_blank" rel="noopener"><span>🎵</span><span>TikTok</span></a></div>
+  </div>
+</article>
+<article class="card" data-i18n-scope="card">
+  <div class="card-media">
+    <img class="card-img" alt="AMAZONPARÁ TURISMO E RECEPTIVO" src="assets/img/empresas-parceiras/amazonpar-turismo-e-receptivo-amazon-par-turismo--logo.png"/>
+  </div>
+  <div class="card-body">
+    <div class="card-badge" data-i18n-pt="Empresa Parceira" data-i18n-en="Partner Company" data-i18n-es="Empresa Asociada">Empresa Parceira</div>
+    <h4 class="card-title">AMAZONPARÁ TURISMO E RECEPTIVO</h4>
+    <p class="card-desc" data-desc-pt="A AmazonPará Turismo e Receptivo está há 10 anos no mercado planejando e organizando os melhores roteiros de viagem. Conheça a Amazônia com a AmazonPará Turismo" data-desc-en="A AmazonPará Turismo e Receptivo está há 10 anos no mercado planejando e organizando os melhores roteiros de viagem. Conheça a Amazônia com a AmazonPará Turismo" data-desc-es="A AmazonPará Turismo e Receptivo está há 10 anos no mercado planejando e organizando os melhores roteiros de viagem. Conheça a Amazônia com a AmazonPará Turismo">A AmazonPará Turismo e Receptivo está há 10 anos no mercado planejando e organizando os melhores roteiros de viagem. Conheça a Amazônia com a AmazonPará Turismo</p>
+    <div class="card-actions"><a class="chip" href="https://www.amazonparaturismo.com/" target="_blank" rel="noopener"><span>🌐</span><span>Site</span></a><a class="chip" href="tel:91982420325" target="_blank" rel="noopener"><span>📞</span><span>Telefone</span></a><a class="chip" href="https://www.instagram.com/amazonparaturismooficial/" target="_blank" rel="noopener"><span>📷</span><span>Instagram</span></a><a class="chip" href="https://web.facebook.com/amazonparaturismo" target="_blank" rel="noopener"><span>📘</span><span>Facebook</span></a></div>
+  </div>
+</article>
+<article class="card" data-i18n-scope="card">
+  <div class="card-media">
+    <img class="card-img" alt="Bela Belem Turismo" src="assets/img/empresas-parceiras/bela-belem-logo-bela-belem---melhorada-1-.png"/>
+  </div>
+  <div class="card-body">
+    <div class="card-badge" data-i18n-pt="Empresa Parceira" data-i18n-en="Partner Company" data-i18n-es="Empresa Asociada">Empresa Parceira</div>
+    <h4 class="card-title">Bela Belem Turismo</h4>
+    <p class="card-desc" data-desc-pt="Construimos conteúdo turístico padronizado, PACOTES TURÍSTICOS, como também adaptados ao perfil de nossos clientes. Atendemos em Belém do Pará e suas ilhas, Ilha do Marajó, Região do Salgado e Baixo Tocantins com toda a estrutura logística e conforto necessários a um turismo ambiental, cultural, histórico e popular de qualidade a preço justo. Operamos com pessoas de todas as idades, origens e matrizes culturais...." data-desc-en="Construimos conteúdo turístico padronizado, PACOTES TURÍSTICOS, como também adaptados ao perfil de nossos clientes. Atendemos em Belém do Pará e suas ilhas, Ilha do Marajó, Região do Salgado e Baixo Tocantins com toda a estrutura logística e conforto necessários a um turismo ambiental, cultural, histórico e popular de qualidade a preço justo. Operamos com pessoas de todas as idades, origens e matrizes culturais...." data-desc-es="Construimos conteúdo turístico padronizado, PACOTES TURÍSTICOS, como também adaptados ao perfil de nossos clientes. Atendemos em Belém do Pará e suas ilhas, Ilha do Marajó, Região do Salgado e Baixo Tocantins com toda a estrutura logística e conforto necessários a um turismo ambiental, cultural, histórico e popular de qualidade a preço justo. Operamos com pessoas de todas as idades, origens e matrizes culturais....">Construimos conteúdo turístico padronizado, PACOTES TURÍSTICOS, como também adaptados ao perfil de nossos clientes. Atendemos em Belém do Pará e suas ilhas, Ilha do Marajó, Região do Salgado e Baixo Tocantins com toda a estrutura logística e conforto necessários a um turismo ambiental, cultural, histórico e popular de qualidade a preço justo. Operamos com pessoas de todas as idades, origens e matrizes culturais....</p>
+    <div class="card-actions"><a class="chip" href="https://wa.me/91980606922" target="_blank" rel="noopener"><span>💬</span><span>WhatsApp</span></a><a class="chip" href="https://www.instagram.com/belabelemturismo/" target="_blank" rel="noopener"><span>📷</span><span>Instagram</span></a></div>
+  </div>
+</article>
+<article class="card" data-i18n-scope="card">
+  <div class="card-media">
+    <img class="card-img" alt="Hotel Marajó" src="assets/img/empresas-parceiras/hotel-maraj--hotel-maraj-logo.png"/>
+  </div>
+  <div class="card-body">
+    <div class="card-badge" data-i18n-pt="Empresa Parceira" data-i18n-en="Partner Company" data-i18n-es="Empresa Asociada">Empresa Parceira</div>
+    <h4 class="card-title">Hotel Marajó</h4>
+    <p class="card-desc" data-desc-pt="localizado na encantadora cidade de Soure, no coração da Ilha do Marajó. Somos a melhor opção de hospedagem para famílias que buscam conforto, acolhimento e uma verdadeira experiência amazônica. Nosso hotel oferece uma proposta única de turismo de experiência, conectando nossos hóspedes à cultura local, à natureza exuberante e às tradições marajoaras. Tudo isso com a comodidade e o cuidado que só um hotel..." data-desc-en="localizado na encantadora cidade de Soure, no coração da Ilha do Marajó. Somos a melhor opção de hospedagem para famílias que buscam conforto, acolhimento e uma verdadeira experiência amazônica. Nosso hotel oferece uma proposta única de turismo de experiência, conectando nossos hóspedes à cultura local, à natureza exuberante e às tradições marajoaras. Tudo isso com a comodidade e o cuidado que só um hotel..." data-desc-es="localizado na encantadora cidade de Soure, no coração da Ilha do Marajó. Somos a melhor opção de hospedagem para famílias que buscam conforto, acolhimento e uma verdadeira experiência amazônica. Nosso hotel oferece uma proposta única de turismo de experiência, conectando nossos hóspedes à cultura local, à natureza exuberante e às tradições marajoaras. Tudo isso com a comodidade e o cuidado que só um hotel...">localizado na encantadora cidade de Soure, no coração da Ilha do Marajó. Somos a melhor opção de hospedagem para famílias que buscam conforto, acolhimento e uma verdadeira experiência amazônica. Nosso hotel oferece uma proposta única de turismo de experiência, conectando nossos hóspedes à cultura local, à natureza exuberante e às tradições marajoaras. Tudo isso com a comodidade e o cuidado que só um hotel...</p>
+    <div class="card-actions"><a class="chip" href="https://wa.me/91981146094" target="_blank" rel="noopener"><span>💬</span><span>WhatsApp</span></a><a class="chip" href="https://wa.me/37411396" target="_blank" rel="noopener"><span>💬</span><span>WhatsApp</span></a><a class="chip" href="https://www.instagram.com/hotelmarajo.soure/" target="_blank" rel="noopener"><span>📷</span><span>Instagram</span></a></div>
+  </div>
+</article>
+<article class="card" data-i18n-scope="card">
+  <div class="card-media">
+    <img class="card-img" alt="Larrat Turismo" src="assets/img/empresas-parceiras/larrat-turismo-screenshot_20251105_215734_all-pdf-reader.jpg"/>
+  </div>
+  <div class="card-body">
+    <div class="card-badge" data-i18n-pt="Empresa Parceira" data-i18n-en="Partner Company" data-i18n-es="Empresa Asociada">Empresa Parceira</div>
+    <h4 class="card-title">Larrat Turismo</h4>
+    <p class="card-desc" data-desc-pt="Serviço de Receptivo Uma empresa comprometida com a satisfação de seus clientes" data-desc-en="Serviço de Receptivo Uma empresa comprometida com a satisfação de seus clientes" data-desc-es="Serviço de Receptivo Uma empresa comprometida com a satisfação de seus clientes">Serviço de Receptivo Uma empresa comprometida com a satisfação de seus clientes</p>
+    <div class="card-actions"><a class="chip" href="tel:972534714857" target="_blank" rel="noopener"><span>📞</span><span>Telefone</span></a></div>
+  </div>
+</article>
+<article class="card" data-i18n-scope="card">
+  <div class="card-media">
+    <img class="card-img" alt="Marajoara Travel" src="assets/img/empresas-parceiras/marajoara-travel-logo-marajoara-travel.jpeg"/>
+  </div>
+  <div class="card-body">
+    <div class="card-badge" data-i18n-pt="Empresa Parceira" data-i18n-en="Partner Company" data-i18n-es="Empresa Asociada">Empresa Parceira</div>
+    <h4 class="card-title">Marajoara Travel</h4>
+    <p class="card-desc" data-desc-pt="cria experiências que fogem do óbvio, conectando pessoas a destinos inesquecíveis. Aqui, cada roteiro nasce para encantar, surpreender e fazer você viver o mundo do seu jeito. Venha conhecer Belém, Ilha do Combu e Ilha do Marajó! Experiências que encantam, memórias que ficam!" data-desc-en="cria experiências que fogem do óbvio, conectando pessoas a destinos inesquecíveis. Aqui, cada roteiro nasce para encantar, surpreender e fazer você viver o mundo do seu jeito. Venha conhecer Belém, Ilha do Combu e Ilha do Marajó! Experiências que encantam, memórias que ficam!" data-desc-es="cria experiências que fogem do óbvio, conectando pessoas a destinos inesquecíveis. Aqui, cada roteiro nasce para encantar, surpreender e fazer você viver o mundo do seu jeito. Venha conhecer Belém, Ilha do Combu e Ilha do Marajó! Experiências que encantam, memórias que ficam!">cria experiências que fogem do óbvio, conectando pessoas a destinos inesquecíveis. Aqui, cada roteiro nasce para encantar, surpreender e fazer você viver o mundo do seu jeito. Venha conhecer Belém, Ilha do Combu e Ilha do Marajó! Experiências que encantam, memórias que ficam!</p>
+    <div class="card-actions"><a class="chip" href="https://www.marajoaratravel.com.br" target="_blank" rel="noopener"><span>🌐</span><span>Site</span></a><a class="chip" href="tel:91985882644" target="_blank" rel="noopener"><span>📞</span><span>Telefone</span></a><a class="chip" href="tel:61570336235813" target="_blank" rel="noopener"><span>📞</span><span>Telefone</span></a><a class="chip" href="https://www.instagram.com/marajoaratravel/" target="_blank" rel="noopener"><span>📷</span><span>Instagram</span></a><a class="chip" href="https://web.facebook.com/profile.php?id=61570336235813" target="_blank" rel="noopener"><span>📘</span><span>Facebook</span></a><a class="chip" href="mailto:comercial@marajoaratravel.com.br" target="_blank" rel="noopener"><span>✉️</span><span>E-mail</span></a></div>
+  </div>
+</article>
+<article class="card" data-i18n-scope="card">
+  <div class="card-media">
+    <img class="card-img" alt="PORTO EXCLUSIVO" src="assets/img/empresas-parceiras/Logo_PORTO_EXCLUSIVO.png"/>
+  </div>
+  <div class="card-body">
+    <div class="card-badge" data-i18n-pt="Empresa Parceira" data-i18n-en="Partner Company" data-i18n-es="Empresa Asociada">Empresa Parceira</div>
+    <h4 class="card-title">PORTO EXCLUSIVO</h4>
+    <p class="card-desc" data-desc-pt="A gente cuida de tudo!" data-desc-en="A gente cuida de tudo!" data-desc-es="A gente cuida de tudo!">A gente cuida de tudo!</p>
+    <div class="card-actions"><a class="chip" href="https://www.portoexclusivo.com" target="_blank" rel="noopener"><span>🌐</span><span>Site</span></a><a class="chip" href="https://wa.me/091992966768" target="_blank" rel="noopener"><span>💬</span><span>WhatsApp</span></a><a class="chip" href="https://www.instagram.com/portoexclusivo" target="_blank" rel="noopener"><span>📷</span><span>Instagram</span></a></div>
+  </div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<!-- Commitment Section -->
+<section class="commitment">
+<div class="container">
+<div class="commitment-content">
+<h2 class="commitment-title">Nosso Compromisso com a COP30</h2>
+<div class="commitment-grid">
+<div class="commitment-item">
+<div class="commitment-icon">🌱</div>
+<h3>Neutralidade de Carbono</h3>
+<p>Todas as operações compensam 100% das emissões de CO₂</p>
+</div>
+<div class="commitment-item">
+<div class="commitment-icon">♻️</div>
+<h3>Economia Circular</h3>
+<p>Redução, reutilização e reciclagem em todos os processos</p>
+</div>
+<div class="commitment-item">
+<div class="commitment-icon">🤝</div>
+<h3>Desenvolvimento Local</h3>
+<p>Geração de renda e valorização das comunidades</p>
+</div>
+<div class="commitment-item">
+<div class="commitment-icon">🌳</div>
+<h3>Preservação</h3>
+<p>Proteção ativa de áreas naturais e biodiversidade</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+
+<section class="mapa-belem-wrapper" id="mapa-turistico">
+  <div class="mapa-container mapa-inline">
+    <a class="btn-download-large" href="assets/docs/mapa-turistico-belem.pdf" download data-i18n-pt="📍 BAIXE O MAPA TURÍSTICO DE BELÉM" data-i18n-en="📍 DOWNLOAD BELÉM TOURIST MAP" data-i18n-es="📍 DESCARGUE EL MAPA TURÍSTICO DE BELÉM">
+      📍 BAIXE O MAPA TURÍSTICO DE BELÉM
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+<div class="container">
+<div class="footer-content">
+<div class="footer-section">
+<div class="footer-logo">
+<svg class="footer-logo-svg" viewbox="0 0 200 80">
+<text class="footer-logo-text" x="10" y="50">COP30</text>
+</svg>
+</div>
+<p class="footer-tagline" data-i18n-pt="COP30 NA AMAZÔNIA para um Futuro Verde" data-i18n-en="COP30 IN THE AMAZON for a Green Future" data-i18n-es="COP30 EN LA AMAZONÍA para un Futuro Verde">COP30 NA AMAZÔNIA para um Futuro Verde</p>
+</div>
+<div class="footer-section">
+<h4 class="footer-title" data-i18n-pt="Contato" data-i18n-en="Contact" data-i18n-es="Contacto">Contato</h4>
+<p class="footer-text">parceirospits@gmail.com</p>
+<p class="footer-text" data-i18n-pt="Belém - Pará - Brasil" data-i18n-en="Belém - Pará - Brazil" data-i18n-es="Belém - Pará - Brasil">Belém - Pará - Brasil</p>
+</div>
+<div class="footer-section">
+<h4 class="footer-title" data-i18n-pt="Sobre" data-i18n-en="About" data-i18n-es="Acerca de">Sobre</h4>
+<p class="footer-text" data-i18n-pt="Programa oficial de Parceiros da COP30" data-i18n-en="Official COP30 Partners Program" data-i18n-es="Programa oficial de Socios de la COP30">Programa oficial de Parceiros da COP30</p>
+<p class="footer-text" data-i18n-pt="Compromisso com sustentabilidade" data-i18n-en="Commitment to sustainability" data-i18n-es="Compromiso con la sostenibilidad">Compromisso com sustentabilidade</p>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2025 COP30 - Todos os direitos reservados</p>
+</div>
 </div>
 
 
@@ -724,352 +1352,262 @@ hr, .footer-divider { display:none !important; }
 
 
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <div class="logo-cop30">
-                <svg viewBox="0 0 200 80" class="cop30-logo">
-                    <text x="10" y="60" class="logo-text">COP30</text>
-                </svg>
-            </div>
-            <h1 class="hero-title" data-i18n-pt="Turismo Sustentável" data-i18n-en="Sustainable Tourism" data-i18n-es="Turismo Sostenible">Turismo Sustentável</h1>
-            <p class="hero-subtitle" data-i18n-pt="Conheça nossos parceiros comprometidos com o futuro do planeta" data-i18n-en="Discover our partners committed to the planet’s future" data-i18n-es="Conozca a nuestros socios comprometidos con el futuro del planeta">Conheça nossos parceiros comprometidos com o futuro do planeta</p>
-            <div class="leaf-decoration">
-                <div class="leaf leaf-1"></div>
-                <div class="leaf leaf-2"></div>
-                <div class="leaf leaf-3"></div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="scroll-arrow"></div>
-        </div>
-    </header>
-
-    <!-- Mission Statement -->
-    <section class="mission">
-        <div class="container">
-            <div class="mission-content">
-                <span class="mission-label">Nossa Missão</span>
-                <h2 class="mission-title"><span data-i18n-pt="Conectando pessoas à natureza através do turismo responsável" data-i18n-en="Connecting people with nature through responsible tourism" data-i18n-es="Conectando personas con la naturaleza a través del turismo responsable">Conectando pessoas à natureza através do turismo responsável</span></h2>
-                <p class="mission-text">
-                    Nossos patrocinadores compartilham o compromisso com práticas sustentáveis, 
-                    preservação ambiental e desenvolvimento consciente. Juntos, construímos um 
-                    futuro onde turismo e natureza coexistem em harmonia.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Carbono Neutro</div>
-                    <p class="stat-description"><span data-i18n-pt="Todas as empresas parceiras compensam suas emissões" data-i18n-en="All partner companies offset their emissions" data-i18n-es="Todas las empresas asociadas compensan sus emisiones">Todas as empresas parceiras compensam suas emissões</span></p>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">50+</div>
-                    <div class="stat-label">Parceiros</div>
-                    <p class="stat-description"><span data-i18n-pt="Hotéis e agências comprometidas com sustentabilidade" data-i18n-en="Hotels and agencies committed to sustainability" data-i18n-es="Hoteles y agencias comprometidas con la sostenibilidad">Hotéis e agências comprometidas com sustentabilidade</span></p>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">1M+</div>
-                    <div class="stat-label">Árvores Plantadas</div>
-                    <p class="stat-description"><span data-i18n-pt="Contribuição coletiva para reflorestamento" data-i18n-en="Collective contribution to reforestation" data-i18n-es="Contribución colectiva al reforestación">Contribuição coletiva para reflorestamento</span></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sponsors Section -->
-    
-
-
-
-
-<section class="sponsors" id="conteudo">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title" data-i18n-pt="Conteúdo dos PITS" data-i18n-en="PITS Content" data-i18n-es="Contenido de los PITS">Conteúdo dos PITS</h2>
-      <p class="section-subtitle" data-i18n-pt="Duas categorias: Guias Turísticos e Empresas Parceiras" data-i18n-en="Two categories: Tourist Guides and Partner Companies" data-i18n-es="Dos categorías: Guías Turísticos y Empresas Asociadas">Duas categorias: Guias Turísticos e Empresas Parceiras</p>
-    </div>
-
-    <div class="sponsor-category" id="guias">
-      <h3 class="category-title"><span class="category-icon">🧭</span> <span data-i18n-pt="Guias Turísticos" data-i18n-en="Tourist Guides" data-i18n-es="Guías Turísticos">Guias Turísticos</span></h3>
-      <div class="cards-grid">
-        
-    <article class="card" data-i18n-scope="card">
-      <div class="card-media"><img src="assets/img/analice-mota.jpeg" alt="Analice Mota" class="card-img"/></div>
-      <div class="card-body">
-        <div class="card-badge" data-i18n-pt="Guia Turístico" data-i18n-en="Tourist Guide" data-i18n-es="Guía Turístico">Guia Turístico</div>
-        <h4 class="card-title">Analice Mota</h4>
-        <p class="card-desc"
-           data-desc-pt="Analice Mota oferece roteiros personalizados em Belém e arredores — Ilha do Combu. Com acolhimento, segurança e dicas locais, cada passeio vira uma experiência amazônica autêntica. Perfeito para quem busca cultura, natureza e fotografia."
-           data-desc-en="Analice Mota offers tailor‑made itineraries in Belém and surroundings — Combu Island. With safety, warm hosting and local insider tips, every tour becomes an authentic Amazon experience. Perfect for travellers into culture, nature and photography."
-           data-desc-es="Analice Mota ofrece recorridos personalizados en Belém y alrededores — Isla de Combu. Con seguridad, cercanía y consejos locales, cada paseo se vuelve una auténtica experiencia amazónica. Ideal para quienes buscan cultura, naturaleza y fotografía.">Analice Mota oferece roteiros personalizados em Belém e arredores — Ilha do Combu. Com acolhimento, segurança e dicas locais, cada passeio vira uma experiência amazônica autêntica. Perfeito para quem busca cultura, natureza e fotografia.</p>
-        <div class="card-actions"><a class="chip" href="tel:91988055425" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.9 15.9 0 006.6 6.6l2.2-2.2a1 1 0 011.1-.2c1.2.5 2.6.8 4 .8a1 1 0 011 1V20a1 1 0 01-1 1C11 21 3 13 3 4a1 1 0 011-1h3.2a1 1 0 011 1c0 1.4.3 2.8.8 4a1 1 0 01-.2 1.1l-2.2 2.2z"/></svg><span>91988055425</span></a></div>
-      </div>
-    </article>
-    
-
-    <article class="card" data-i18n-scope="card">
-      <div class="card-media"><img src="assets/img/andreza-de-oliveira-lima.jpeg" alt="Andreza De Oliveira Lima" class="card-img"/></div>
-      <div class="card-body">
-        <div class="card-badge" data-i18n-pt="Guia Turístico" data-i18n-en="Tourist Guide" data-i18n-es="Guía Turístico">Guia Turístico</div>
-        <h4 class="card-title">Andreza De Oliveira Lima</h4>
-        <p class="card-desc"
-           data-desc-pt="Andreza De Oliveira Lima oferece roteiros personalizados em Belém e arredores — experiências na natureza. Com acolhimento, segurança e dicas locais, cada passeio vira uma experiência amazônica autêntica. Perfeito para quem busca cultura, natureza e fotografia."
-           data-desc-en="Andreza De Oliveira Lima offers tailor‑made itineraries in Belém and surroundings — nature experiences. With safety, warm hosting and local insider tips, every tour becomes an authentic Amazon experience. Perfect for travellers into culture, nature and photography."
-           data-desc-es="Andreza De Oliveira Lima ofrece recorridos personalizados en Belém y alrededores — experiencias en la naturaleza. Con seguridad, cercanía y consejos locales, cada paseo se vuelve una auténtica experiencia amazónica. Ideal para quienes buscan cultura, naturaleza y fotografía.">Andreza De Oliveira Lima oferece roteiros personalizados em Belém e arredores — experiências na natureza. Com acolhimento, segurança e dicas locais, cada passeio vira uma experiência amazônica autêntica. Perfeito para quem busca cultura, natureza e fotografia.</p>
-        <div class="card-actions"><a class="chip" href="https://www.instagram.com/andrezaguiapirabas?igsh=b2o1aGR5eW83ODAz&utm_source=qr" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm0 2h10c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3zm11 1.5a1.5 1.5 0 100 3 1.5 1.5 0 000-3zM12 7a5 5 0 100 10 5 5 0 000-10z"/></svg><span>Instagram</span></a><a class="chip" href="tel:91982849881" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.9 15.9 0 006.6 6.6l2.2-2.2a1 1 0 011.1-.2c1.2.5 2.6.8 4 .8a1 1 0 011 1V20a1 1 0 01-1 1C11 21 3 13 3 4a1 1 0 011-1h3.2a1 1 0 011 1c0 1.4.3 2.8.8 4a1 1 0 01-.2 1.1l-2.2 2.2z"/></svg><span>91982849881</span></a><a class="chip" href="mailto:andrezaguiapirabas@gmail.com" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm0 2v.5l8 5 8-5V6H4zm16 12V9.2l-8 5-8-5V18h16z"/></svg><span>Email</span></a><span class="chip muted"><svg width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M3 4h18v16H3z"/></svg><span>CADASTUR 14.126343.54-0</span></span></div>
-      </div>
-    </article>
-    
-
-    <article class="card" data-i18n-scope="card">
-      <div class="card-media"><img src="assets/img/carla-leite.jpg" alt="Carla Leite" class="card-img"/></div>
-      <div class="card-body">
-        <div class="card-badge" data-i18n-pt="Guia Turístico" data-i18n-en="Tourist Guide" data-i18n-es="Guía Turístico">Guia Turístico</div>
-        <h4 class="card-title">Carla Leite</h4>
-        <p class="card-desc"
-           data-desc-pt="Carla Leite oferece roteiros personalizados em Belém e arredores — Ilha do Combu. Com acolhimento, segurança e dicas locais, cada passeio vira uma experiência amazônica autêntica. Perfeito para quem busca cultura, natureza e fotografia."
-           data-desc-en="Carla Leite offers tailor‑made itineraries in Belém and surroundings — Combu Island. With safety, warm hosting and local insider tips, every tour becomes an authentic Amazon experience. Perfect for travellers into culture, nature and photography."
-           data-desc-es="Carla Leite ofrece recorridos personalizados en Belém y alrededores — Isla de Combu. Con seguridad, cercanía y consejos locales, cada paseo se vuelve una auténtica experiencia amazónica. Ideal para quienes buscan cultura, naturaleza y fotografía.">Carla Leite oferece roteiros personalizados em Belém e arredores — Ilha do Combu. Com acolhimento, segurança e dicas locais, cada passeio vira uma experiência amazônica autêntica. Perfeito para quem busca cultura, natureza e fotografia.</p>
-        <div class="card-actions"><a class="chip" href="tel:996424488" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.9 15.9 0 006.6 6.6l2.2-2.2a1 1 0 011.1-.2c1.2.5 2.6.8 4 .8a1 1 0 011 1V20a1 1 0 01-1 1C11 21 3 13 3 4a1 1 0 011-1h3.2a1 1 0 011 1c0 1.4.3 2.8.8 4a1 1 0 01-.2 1.1l-2.2 2.2z"/></svg><span>996424488</span></a><a class="chip" href="mailto:cc.leite@yahoo.com.br" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm0 2v.5l8 5 8-5V6H4zm16 12V9.2l-8 5-8-5V18h16z"/></svg><span>Email</span></a></div>
-      </div>
-    </article>
-    
-
-    <article class="card" data-i18n-scope="card">
-      <div class="card-media"><img src="assets/img/cogtur-pa-cooperativa-dos-guias-de-turismo-do-para-bem-vindos-a-cogtur-cooperativa-dos-guias-de-turismo-do-par-a.png" alt="Cogtur/Pa (Cooperativa Dos Guias De Turismo Do Pará) Bem-Vindos À Cogtur Cooperativa Dos Guias De Turismo Do Par Á" class="card-img"/></div>
-      <div class="card-body">
-        <div class="card-badge" data-i18n-pt="Guia Turístico" data-i18n-en="Tourist Guide" data-i18n-es="Guía Turístico">Guia Turístico</div>
-        <h4 class="card-title">Cogtur/Pa (Cooperativa Dos Guias De Turismo Do Pará) Bem-Vindos À Cogtur Cooperativa Dos Guias De Turismo Do Par Á</h4>
-        <p class="card-desc"
-           data-desc-pt="Cogtur/Pa (Cooperativa Dos Guias De Turismo Do Pará) Bem-Vindos À Cogtur Cooperativa Dos Guias De Turismo Do Par Á oferece roteiros personalizados em Belém e arredores. Com acolhimento, segurança e dicas locais, cada passeio vira uma experiência amazônica autêntica. Perfeito para quem busca cultura, natureza e fotografia."
-           data-desc-en="Cogtur/Pa (Cooperativa Dos Guias De Turismo Do Pará) Bem-Vindos À Cogtur Cooperativa Dos Guias De Turismo Do Par Á offers tailor‑made itineraries in Belém and surroundings. With safety, warm hosting and local insider tips, every tour becomes an authentic Amazon experience. Perfect for travellers into culture, nature and photography."
-           data-desc-es="Cogtur/Pa (Cooperativa Dos Guias De Turismo Do Pará) Bem-Vindos À Cogtur Cooperativa Dos Guias De Turismo Do Par Á ofrece recorridos personalizados en Belém y alrededores. Con seguridad, cercanía y consejos locales, cada paseo se vuelve una auténtica experiencia amazónica. Ideal para quienes buscan cultura, naturaleza y fotografía.">Cogtur/Pa (Cooperativa Dos Guias De Turismo Do Pará) Bem-Vindos À Cogtur Cooperativa Dos Guias De Turismo Do Par Á oferece roteiros personalizados em Belém e arredores. Com acolhimento, segurança e dicas locais, cada passeio vira uma experiência amazônica autêntica. Perfeito para quem busca cultura, natureza e fotografia.</p>
-        <div class="card-actions"><a class="chip" href="tel:91985295092" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.9 15.9 0 006.6 6.6l2.2-2.2a1 1 0 011.1-.2c1.2.5 2.6.8 4 .8a1 1 0 011 1V20a1 1 0 01-1 1C11 21 3 13 3 4a1 1 0 011-1h3.2a1 1 0 011 1c0 1.4.3 2.8.8 4a1 1 0 01-.2 1.1l-2.2 2.2z"/></svg><span>(91) 985295092</span></a></div>
-      </div>
-    </article>
-    
-
-    <article class="card" data-i18n-scope="card">
-      <div class="card-media"><img src="assets/img/luizete-costa.jpg" alt="Luizete Costa" class="card-img"/></div>
-      <div class="card-body">
-        <div class="card-badge" data-i18n-pt="Guia Turístico" data-i18n-en="Tourist Guide" data-i18n-es="Guía Turístico">Guia Turístico</div>
-        <h4 class="card-title">Luizete Costa</h4>
-        <p class="card-desc"
-           data-desc-pt="Luizete Costa oferece roteiros personalizados em Belém e arredores — experiências na natureza. Com acolhimento, segurança e dicas locais, cada passeio vira uma experiência amazônica autêntica. Perfeito para quem busca cultura, natureza e fotografia."
-           data-desc-en="Luizete Costa offers tailor‑made itineraries in Belém and surroundings — nature experiences. With safety, warm hosting and local insider tips, every tour becomes an authentic Amazon experience. Perfect for travellers into culture, nature and photography."
-           data-desc-es="Luizete Costa ofrece recorridos personalizados en Belém y alrededores — experiencias en la naturaleza. Con seguridad, cercanía y consejos locales, cada paseo se vuelve una auténtica experiencia amazónica. Ideal para quienes buscan cultura, naturaleza y fotografía.">Luizete Costa oferece roteiros personalizados em Belém e arredores — experiências na natureza. Com acolhimento, segurança e dicas locais, cada passeio vira uma experiência amazônica autêntica. Perfeito para quem busca cultura, natureza e fotografia.</p>
-        <div class="card-actions"><a class="chip" href="tel:91988055885" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.9 15.9 0 006.6 6.6l2.2-2.2a1 1 0 011.1-.2c1.2.5 2.6.8 4 .8a1 1 0 011 1V20a1 1 0 01-1 1C11 21 3 13 3 4a1 1 0 011-1h3.2a1 1 0 011 1c0 1.4.3 2.8.8 4a1 1 0 01-.2 1.1l-2.2 2.2z"/></svg><span>91 98805-5885</span></a></div>
-      </div>
-    </article>
-    
-
-    <article class="card" data-i18n-scope="card">
-      <div class="card-media"><img src="assets/img/sara.png" alt="Sara" class="card-img"/></div>
-      <div class="card-body">
-        <div class="card-badge" data-i18n-pt="Guia Turístico" data-i18n-en="Tourist Guide" data-i18n-es="Guía Turístico">Guia Turístico</div>
-        <h4 class="card-title">Sara</h4>
-        <p class="card-desc"
-           data-desc-pt="Sara oferece roteiros personalizados em Belém e arredores. Com acolhimento, segurança e dicas locais, cada passeio vira uma experiência amazônica autêntica. Perfeito para quem busca cultura, natureza e fotografia."
-           data-desc-en="Sara offers tailor‑made itineraries in Belém and surroundings. With safety, warm hosting and local insider tips, every tour becomes an authentic Amazon experience. Perfect for travellers into culture, nature and photography."
-           data-desc-es="Sara ofrece recorridos personalizados en Belém y alrededores. Con seguridad, cercanía y consejos locales, cada paseo se vuelve una auténtica experiencia amazónica. Ideal para quienes buscan cultura, naturaleza y fotografía.">Sara oferece roteiros personalizados em Belém e arredores. Com acolhimento, segurança e dicas locais, cada passeio vira uma experiência amazônica autêntica. Perfeito para quem busca cultura, natureza e fotografia.</p>
-        <div class="card-actions"><a class="chip" href="https://www.instagram.com/saraturexcursoes/" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm0 2h10c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3zm11 1.5a1.5 1.5 0 100 3 1.5 1.5 0 000-3zM12 7a5 5 0 100 10 5 5 0 000-10z"/></svg><span>Instagram</span></a><a class="chip" href="https://www.facebook.com/sara.amaral.599554/?locale=pt_BR" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 100 20 10 10 0 000-20z"/></svg><span>Site</span></a><a class="chip" href="tel:91983036346" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.9 15.9 0 006.6 6.6l2.2-2.2a1 1 0 011.1-.2c1.2.5 2.6.8 4 .8a1 1 0 011 1V20a1 1 0 01-1 1C11 21 3 13 3 4a1 1 0 011-1h3.2a1 1 0 011 1c0 1.4.3 2.8.8 4a1 1 0 01-.2 1.1l-2.2 2.2z"/></svg><span>91 98303-6346</span></a></div>
-      </div>
-    </article>
-    
-      </div>
-    </div>
-
-    <div class="sponsor-category" id="parceiras">
-      <h3 class="category-title"><span class="category-icon">🤝</span> <span data-i18n-pt="Empresas Parceiras" data-i18n-en="Partner Companies" data-i18n-es="Empresas Asociadas">Empresas Parceiras</span></h3>
-      <div class="cards-grid">
-        
-    <article class="card" data-i18n-scope="card">
-      <div class="card-media"><img src="assets/img/saldosa-maloca-eco-restaurante-descricao-curta-ate-400-caracteres-no-coracao-da-ilha-do-combu.png" alt="Saldosa Maloca Eco Restaurante Descrição Curta (Até 400 Caracteres): No Coração Da Ilha Do Combu" class="card-img"/></div>
-      <div class="card-body">
-        <div class="card-badge" data-i18n-pt="Empresa Parceira" data-i18n-en="Partner Company" data-i18n-es="Empresa Asociada">Empresa Parceira</div>
-        <h4 class="card-title">Saldosa Maloca Eco Restaurante Descrição Curta (Até 400 Caracteres): No Coração Da Ilha Do Combu</h4>
-        <p class="card-desc"
-           data-desc-pt="Saldosa Maloca Eco Restaurante Descrição Curta (Até 400 Caracteres): No Coração Da Ilha Do Combu convida você a viver a essência de Belém na Ilha do Combu — gastronomia regional, natureza e hospitalidade paraense. Experimente sabores autênticos, aproveite o clima amazônico e registre momentos inesquecíveis à beira dos rios. Parceira oficial dos PITS na COP30."
-           data-desc-en="Saldosa Maloca Eco Restaurante Descrição Curta (Até 400 Caracteres): No Coração Da Ilha Do Combu invites you to experience the essence of Belém on Combu Island — regional cuisine, nature and warm Amazonian hospitality. Savour authentic flavours, enjoy the rainforest vibe and capture unforgettable moments by the rivers. Official PITS partner at COP30."
-           data-desc-es="Saldosa Maloca Eco Restaurante Descrição Curta (Até 400 Caracteres): No Coração Da Ilha Do Combu te invita a vivir la esencia de Belém en la Isla de Combu — gastronomía regional, naturaleza y hospitalidad amazónica. Prueba sabores auténticos, disfruta el clima de la selva y guarda momentos inolvidables a orillas de los ríos. Socia oficial de los PITS en la COP30.">Saldosa Maloca Eco Restaurante Descrição Curta (Até 400 Caracteres): No Coração Da Ilha Do Combu convida você a viver a essência de Belém na Ilha do Combu — gastronomia regional, natureza e hospitalidade paraense. Experimente sabores autênticos, aproveite o clima amazônico e registre momentos inesquecíveis à beira dos rios. Parceira oficial dos PITS na COP30.</p>
-        <div class="card-actions"><a class="chip" href="tel:5591999823396" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.9 15.9 0 006.6 6.6l2.2-2.2a1 1 0 011.1-.2c1.2.5 2.6.8 4 .8a1 1 0 011 1V20a1 1 0 01-1 1C11 21 3 13 3 4a1 1 0 011-1h3.2a1 1 0 011 1c0 1.4.3 2.8.8 4a1 1 0 01-.2 1.1l-2.2 2.2z"/></svg><span>55 (91) 99982-3396</span></a></div>
-      </div>
-    </article>
-    
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-    <!-- Commitment Section -->
-    <section class="commitment">
-        <div class="container">
-            <div class="commitment-content">
-                <h2 class="commitment-title">Nosso Compromisso com a COP30</h2>
-                <div class="commitment-grid">
-                    <div class="commitment-item">
-                        <div class="commitment-icon">🌱</div>
-                        <h3>Neutralidade de Carbono</h3>
-                        <p>Todas as operações compensam 100% das emissões de CO₂</p>
-                    </div>
-                    <div class="commitment-item">
-                        <div class="commitment-icon">♻️</div>
-                        <h3>Economia Circular</h3>
-                        <p>Redução, reutilização e reciclagem em todos os processos</p>
-                    </div>
-                    <div class="commitment-item">
-                        <div class="commitment-icon">🤝</div>
-                        <h3>Desenvolvimento Local</h3>
-                        <p>Geração de renda e valorização das comunidades</p>
-                    </div>
-                    <div class="commitment-item">
-                        <div class="commitment-icon">🌳</div>
-                        <h3>Preservação</h3>
-                        <p>Proteção ativa de áreas naturais e biodiversidade</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title">Faça Parte Desta Transformação</h2>
-                <p class="cta-text">
-                    Escolha parceiros comprometidos com o futuro do planeta. 
-                    Turismo sustentável é o caminho para preservar nossas riquezas naturais.
-                </p>
-                <div class="cta-buttons">
-                    
-                    <a href="#" class="btn btn-secondary">Saiba Mais sobre COP30</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <svg viewBox="0 0 200 80" class="footer-logo-svg">
-                            <text x="10" y="50" class="footer-logo-text">COP30</text>
-                        </svg>
-                    </div>
-                    <p class="footer-tagline">Turismo Sustentável para um Futuro Verde</p>
-                </div>
-                <div class="footer-section">
-                    <h4 class="footer-title">Contato</h4>
-                    <p class="footer-text">parceirospits@gmail.com</p>
-                    <p class="footer-text">Belém - Pará - Brasil</p>
-                </div>
-                <div class="footer-section">
-                    <h4 class="footer-title">Sobre</h4>
-                    <p class="footer-text">Programa oficial de patrocinadores da COP30</p>
-                    <p class="footer-text">Compromisso com sustentabilidade</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 COP30 - Todos os direitos reservados</p>
-            </div>
-        </div>
-    </footer>
-
-    
-
-
-
-
-
-
-
-
+</footer>
 <footer class="credits-green">
-  <div class="credits-inner container">
-    <div class="credits-left">
-      <strong data-i18n-pt="COP30" data-i18n-en="COP30" data-i18n-es="COP30">COP30</strong> • <span data-i18n-pt="Belém — Pará — Brasil" data-i18n-en="Belém — Pará — Brazil" data-i18n-es="Belém — Pará — Brasil">Belém — Pará — Brasil</span>
-    </div>
-    <div class="credits-right">
-      <a class="credit-link" href="https://github.com/UgorN" target="_blank" rel="noopener" aria-label="GitHub UgorN">
-        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.61-3.37-1.17-3.37-1.17-.45-1.14-1.1-1.45-1.1-1.45-.9-.62.07-.61.07-.61 1 .07 1.52 1.04 1.52 1.04.89 1.52 2.34 1.08 2.91.83.09-.64.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.57 9.57 0 015 0c1.9-1.29 2.74-1.02 2.74-1.02.56 1.38.21 2.4.11 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0012 2z"/></svg>
-        <span>/UgorN</span>
-      </a>
-      <a class="credit-link" href="https://github.com/amazonext" target="_blank" rel="noopener" aria-label="GitHub Amazonext">
-        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.61-3.37-1.17-3.37-1.17-.45-1.14-1.1-1.45-1.1-1.45-.9-.62.07-.61.07-.61 1 .07 1.52 1.04 1.52 1.04.89 1.52 2.34 1.08 2.91.83.09-.64.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.57 9.57 0 015 0c1.9-1.29 2.74-1.02 2.74-1.02.56 1.38.21 2.4.11 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0012 2z"/></svg>
-        <span>/amazonext</span>
-      </a>
-      <a class="credit-link" href="mailto:thiagosantosgestordetisemcult@gmail.com" aria-label="E-mail">
-        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm0 2v.5l8 5 8-5V6H4zm16 12V9.2l-8 5-8-5V18h16z"/></svg>
-        <span>thiagosantosgestordetisemcult@gmail.com</span>
-      </a>
-    </div>
-  </div>
-  <div class="credits-note" data-i18n-pt="Desenvolvido por Thiago Cruz — Gestor de Tecnologia da Informação (SEMCULT) — Fundador e Desenvolvedor do grupo Amazonext."
-       data-i18n-en="Developed by Thiago Cruz — Head of IT (SEMCULT) — Founder and Developer of the Amazonext group."
-       data-i18n-es="Desarrollado por Thiago Cruz — Gestor de TI (SEMCULT) — Fundador y Desarrollador del grupo Amazonext.">
+<div class="credits-inner container">
+<div class="credits-left">
+<strong data-i18n-en="COP30" data-i18n-es="COP30" data-i18n-pt="COP30">COP30</strong> • <span data-i18n-en="Belém — Pará — Brazil" data-i18n-es="Belém — Pará — Brasil" data-i18n-pt="Belém — Pará — Brasil">Belém — Pará — Brasil</span>
+</div>
+<div class="credits-right">
+<a aria-label="GitHub UgorN" class="credit-link" href="https://github.com/UgorN" rel="noopener" target="_blank">
+<svg aria-hidden="true" height="18" viewbox="0 0 24 24" width="18"><path d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.61-3.37-1.17-3.37-1.17-.45-1.14-1.1-1.45-1.1-1.45-.9-.62.07-.61.07-.61 1 .07 1.52 1.04 1.52 1.04.89 1.52 2.34 1.08 2.91.83.09-.64.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.57 9.57 0 015 0c1.9-1.29 2.74-1.02 2.74-1.02.56 1.38.21 2.4.11 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0012 2z" fill="currentColor"></path></svg>
+<span>/UgorN</span>
+</a>
+<a aria-label="GitHub Amazonext" class="credit-link" href="https://github.com/amazonext" rel="noopener" target="_blank">
+<svg aria-hidden="true" height="18" viewbox="0 0 24 24" width="18"><path d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.61-3.37-1.17-3.37-1.17-.45-1.14-1.1-1.45-1.1-1.45-.9-.62.07-.61.07-.61 1 .07 1.52 1.04 1.52 1.04.89 1.52 2.34 1.08 2.91.83.09-.64.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.57 9.57 0 015 0c1.9-1.29 2.74-1.02 2.74-1.02.56 1.38.21 2.4.11 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0012 2z" fill="currentColor"></path></svg>
+<span>/amazonext</span>
+</a>
+<a aria-label="E-mail" class="credit-link" href="mailto:thiagosantosgestordetisemcult@gmail.com">
+<svg aria-hidden="true" height="18" viewbox="0 0 24 24" width="18"><path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm0 2v.5l8 5 8-5V6H4zm16 12V9.2l-8 5-8-5V18h16z" fill="currentColor"></path></svg>
+<span>thiagosantosgestordetisemcult@gmail.com</span>
+</a>
+</div>
+</div>
+<div class="credits-note" data-i18n-en="Developed by Thiago Cruz — Head of IT (SEMCULT) — Founder and Developer of the Amazonext group." data-i18n-es="Desarrollado por Thiago Cruz — Gestor de TI (SEMCULT) — Fundador y Desarrollador del grupo Amazonext." data-i18n-pt="Desenvolvido por Thiago Cruz — Gestor de Tecnologia da Informação (SEMCULT) — Fundador e Desenvolvedor do grupo Amazonext.">
     Desenvolvido por Thiago Cruz — Gestor de Tecnologia da Informação (SEMCULT) — Fundador e Desenvolvedor do grupo Amazonext.
   </div>
 </footer>
-
-
 <script>
 (function(){
-  function setLang(lang){
+  const translations = {
+    'general': {
+      'pt': {
+        'downloadMap': '📍 BAIXE O MAPA TURÍSTICO DE BELÉM',
+        'location': 'Belém - Pará - Brasil',
+        'contact': 'Contato',
+        'about': 'Sobre',
+        'partnersProgram': 'Programa oficial de Parceiros da COP30',
+        'sustainability': 'Compromisso com sustentabilidade',
+        'tagline': 'COP30 NA AMAZÔNIA para um Futuro Verde'
+      },
+      'en': {
+        'downloadMap': '📍 DOWNLOAD BELÉM TOURIST MAP',
+        'location': 'Belém - Pará - Brazil',
+        'contact': 'Contact',
+        'about': 'About',
+        'partnersProgram': 'Official COP30 Partners Program',
+        'sustainability': 'Commitment to sustainability',
+        'tagline': 'COP30 IN THE AMAZON for a Green Future'
+      },
+      'es': {
+        'downloadMap': '📍 DESCARGUE EL MAPA TURÍSTICO DE BELÉM',
+        'location': 'Belém - Pará - Brasil',
+        'contact': 'Contacto',
+        'about': 'Acerca de',
+        'partnersProgram': 'Programa oficial de Socios de la COP30',
+        'sustainability': 'Compromiso con la sostenibilidad',
+        'tagline': 'COP30 EN LA AMAZONÍA para un Futuro Verde'
+      }
+    },
+    'companies': {
+      'pt': {
+        'amazonEco': 'Somos referência em turismo receptivo no Estado do Pará, proporcionamos experiências únicas e autênticas na Amazônia, com um profundo compromisso profissional e o respeito à cultura local. Somos especializados em programas de ecoturismo e turismo de base comunitária, oferecendo aos visitantes uma imersão genuína nas tradições paraenses. Atuamos nas regiões de Belém, Ilha do Marajó e Alter do Chão.',
+        'amazonPara': 'A AmazonPará Turismo e Receptivo está há 10 anos no mercado planejando e organizando os melhores roteiros de viagem. Conheça a Amazônia com a AmazonPará Turismo',
+        'belaBelem': 'Construimos conteúdo turístico padronizado, PACOTES TURÍSTICOS, como também adaptados ao perfil de nossos clientes. Atendemos em Belém do Pará e suas ilhas, Ilha do Marajó, Região do Salgado e Baixo Tocantins com toda a estrutura logística e conforto necessários a um turismo ambiental, cultural, histórico e popular de qualidade a preço justo.',
+        'hotelMarajo': 'Localizado na encantadora cidade de Soure, no coração da Ilha do Marajó. Somos a melhor opção de hospedagem para famílias que buscam conforto, acolhimento e uma verdadeira experiência amazônica. Nosso hotel oferece uma proposta única de turismo de experiência, conectando nossos hóspedes à cultura local, à natureza exuberante e às tradições marajoaras.',
+        'larrat': 'Serviço de Receptivo Uma empresa comprometida com a satisfação de seus clientes',
+        'marajoaraTravel': 'Cria experiências que fogem do óbvio, conectando pessoas a destinos inesquecíveis. Aqui, cada roteiro nasce para encantar, surpreender e fazer você viver o mundo do seu jeito. Venha conhecer Belém, Ilha do Combu e Ilha do Marajó! Experiências que encantam, memórias que ficam!',
+        'portoExclusivo': 'A gente cuida de tudo!'
+      },
+      'en': {
+        'amazonEco': 'We are a reference in receptive tourism in the State of Pará, providing unique and authentic experiences in the Amazon, with a deep professional commitment and respect for local culture. We specialize in ecotourism and community-based tourism programs, offering visitors genuine immersion in Pará traditions. We operate in the regions of Belém, Marajó Island and Alter do Chão.',
+        'amazonPara': 'AmazonPará Tourism and Receptive has been in the market for 10 years planning and organizing the best travel itineraries. Discover the Amazon with AmazonPará Tourism',
+        'belaBelem': 'We build standardized tourist content, TOURIST PACKAGES, as well as adapted to our clients\' profiles. We serve in Belém do Pará and its islands, Marajó Island, Salgado Region and Lower Tocantins with all the logistical structure and comfort necessary for quality environmental, cultural, historical and popular tourism at a fair price.',
+        'hotelMarajo': 'Located in the charming city of Soure, in the heart of Marajó Island. We are the best accommodation option for families seeking comfort, welcoming and a true Amazonian experience. Our hotel offers a unique tourism experience proposal, connecting our guests to local culture, exuberant nature and Marajoara traditions.',
+        'larrat': 'Receptive Service A company committed to customer satisfaction',
+        'marajoaraTravel': 'Creates experiences that go beyond the obvious, connecting people to unforgettable destinations. Here, each itinerary is born to enchant, surprise and make you live the world your way. Come and discover Belém, Combu Island and Marajó Island! Experiences that enchant, memories that stay!',
+        'portoExclusivo': 'We take care of everything!'
+      },
+      'es': {
+        'amazonEco': 'Somos referencia en turismo receptivo en el Estado de Pará, proporcionando experiencias únicas y auténticas en la Amazonía, con un profundo compromiso profesional y respeto por la cultura local. Nos especializamos en programas de ecoturismo y turismo comunitario, ofreciendo a los visitantes una inmersión genuina en las tradiciones paraenses. Operamos en las regiones de Belém, Isla de Marajó y Alter do Chão.',
+        'amazonPara': 'AmazonPará Turismo y Receptivo lleva 10 años en el mercado planificando y organizando los mejores itinerarios de viaje. Descubra la Amazonía con AmazonPará Turismo',
+        'belaBelem': 'Construimos contenido turístico estandarizado, PAQUETES TURÍSTICOS, así como adaptados al perfil de nuestros clientes. Atendemos en Belém do Pará y sus islas, Isla de Marajó, Región del Salgado y Bajo Tocantins con toda la estructura logística y comodidad necesaria para un turismo ambiental, cultural, histórico y popular de calidad a precio justo.',
+        'hotelMarajo': 'Ubicado en la encantadora ciudad de Soure, en el corazón de la Isla de Marajó. Somos la mejor opción de alojamiento para familias que buscan comodidad, acogida y una verdadera experiencia amazónica. Nuestro hotel ofrece una propuesta única de turismo de experiencia, conectando a nuestros huéspedes con la cultura local, la naturaleza exuberante y las tradiciones marajoaras.',
+        'larrat': 'Servicio Receptivo Una empresa comprometida con la satisfacción del cliente',
+        'marajoaraTravel': '¡Crea experiencias que van más allá de lo obvio, conectando personas con destinos inolvidables. Aquí, cada itinerario nace para encantar, sorprender y hacerte vivir el mundo a tu manera. ¡Ven a conocer Belém, Isla de Combu e Isla de Marajó! ¡Experiencias que encantan, memorias que permanecen!',
+        'portoExclusivo': '¡Nos encargamos de todo!'
+      }
+    },
+    // Traduções específicas que não seguem o padrão de atributos data-*
+    'commitment': {
+      'pt': {
+        'title': 'Nosso Compromisso com a COP30',
+        'carbon': 'Neutralidade de Carbono',
+        'carbonDesc': 'Todas as operações compensam 100% das emissões de CO₂',
+        'circular': 'Economia Circular',
+        'circularDesc': 'Redução, reutilização e reciclagem em todos os processos',
+        'development': 'Desenvolvimento Local',
+        'developmentDesc': 'Geração de renda e valorização das comunidades',
+        'preservation': 'Preservação',
+        'preservationDesc': 'Proteção ativa de áreas naturais e biodiversidade'
+      },
+      'en': {
+        'title': 'Our Commitment to COP30',
+        'carbon': 'Carbon Neutrality',
+        'carbonDesc': 'All operations offset 100% of CO₂ emissions',
+        'circular': 'Circular Economy',
+        'circularDesc': 'Reduction, reuse and recycling in all processes',
+        'development': 'Local Development',
+        'developmentDesc': 'Income generation and community empowerment',
+        'preservation': 'Preservation',
+        'preservationDesc': 'Active protection of natural areas and biodiversity'
+      },
+      'es': {
+        'title': 'Nuestro Compromiso con la COP30',
+        'carbon': 'Neutralidad de Carbono',
+        'carbonDesc': 'Todas las operaciones compensan el 100% de las emisiones de CO₂',
+        'circular': 'Economía Circular',
+        'circularDesc': 'Reducción, reutilización y reciclaje en todos los procesos',
+        'development': 'Desarrollo Local',
+        'developmentDesc': 'Generación de ingresos y valorización de las comunidades',
+        'preservation': 'Preservación',
+        'preservationDesc': 'Protección activa de áreas naturales y biodiversidad'
+      }
+    },
+    'footer': {
+      'pt': {
+        'contact': 'Contato',
+        'about': 'Sobre',
+        'rights': '© 2025 COP30 - Todos os direitos reservados'
+      },
+      'en': {
+        'contact': 'Contact',
+        'about': 'About',
+        'rights': '© 2025 COP30 - All rights reserved'
+      },
+      'es': {
+        'contact': 'Contacto',
+        'about': 'Acerca de',
+        'rights': '© 2025 COP30 - Todos los derechos reservados'
+      }
+    }
+  };
+
+  function setLang(lang) {
     document.documentElement.setAttribute('lang', lang);
-    // Elementos com data-i18n-pt/en/es
+    
+    // 1. Elementos com data-i18n-*
     document.querySelectorAll('[data-i18n-pt]').forEach(el => {
       const txt = el.getAttribute('data-i18n-' + lang) || el.getAttribute('data-i18n-pt');
       if(txt) el.textContent = txt;
     });
-    // Descrições dos cards
+
+    // 1.1 Elementos específicos que precisam de tradução
+    const generalTranslations = translations.general[lang];
+    if (generalTranslations) {
+      // Botão do mapa
+      const mapButton = document.querySelector('.btn-download-large');
+      if (mapButton) mapButton.textContent = generalTranslations.downloadMap;
+
+      // Footer e outros elementos
+      document.querySelectorAll('.footer-tagline').forEach(el => {
+        el.textContent = generalTranslations.tagline;
+      });
+    }
+
+    // 2. Descrições dos cards e empresas
     document.querySelectorAll('.card-desc').forEach(el => {
-      const t = el.getAttribute('data-desc-' + lang) || el.getAttribute('data-desc-pt');
-      if(t) el.textContent = t;
+      const parentCard = el.closest('.card');
+      if (parentCard) {
+        // Identificar a empresa pelo título ou classe específica
+        const title = parentCard.querySelector('.card-title').textContent.trim().toLowerCase();
+        
+        // Mapear o título para a chave de tradução correta
+        let translationKey = '';
+        if (title.includes('amazon eco')) translationKey = 'amazonEco';
+        else if (title.includes('amazonpará')) translationKey = 'amazonPara';
+        else if (title.includes('bela belem')) translationKey = 'belaBelem';
+        else if (title.includes('hotel marajó')) translationKey = 'hotelMarajo';
+        else if (title.includes('larrat')) translationKey = 'larrat';
+        else if (title.includes('marajoara travel')) translationKey = 'marajoaraTravel';
+        else if (title.includes('porto exclusivo')) translationKey = 'portoExclusivo';
+        
+        // Se encontrou uma tradução correspondente, usar ela
+        if (translationKey && translations.companies[lang] && translations.companies[lang][translationKey]) {
+          el.textContent = translations.companies[lang][translationKey];
+        } else {
+          // Fallback para o sistema de atributos data- se não encontrar tradução específica
+          const t = el.getAttribute('data-desc-' + lang) || el.getAttribute('data-desc-pt');
+          if(t) el.textContent = t;
+        }
+      }
     });
-    // Badge dos cards
-    document.querySelectorAll('.card-badge[data-i18n-pt]').forEach(el => {
+
+    // 3. Badges dos cards
+    document.querySelectorAll('.card-badge').forEach(el => {
       const t = el.getAttribute('data-i18n-' + lang) || el.getAttribute('data-i18n-pt');
       if(t) el.textContent = t;
     });
-    // Botão COP30
-    document.querySelectorAll('.cop30-link[data-i18n-pt]').forEach(el => {
-      const t = el.getAttribute('data-i18n-' + lang) || el.getAttribute('data-i18n-pt');
-      if(t) el.textContent = t;
-    });
-    // Marcar botão ativo
-    document.querySelectorAll('.lang-switcher .flag').forEach(b=>b.classList.remove('active'));
+
+    // 4. Seção de compromissos
+    const commitmentSection = translations.commitment[lang];
+    if (commitmentSection) {
+      document.querySelector('.commitment-title').textContent = commitmentSection.title;
+      
+      const items = document.querySelectorAll('.commitment-item');
+      items.forEach((item, index) => {
+        const titles = [commitmentSection.carbon, commitmentSection.circular, 
+                       commitmentSection.development, commitmentSection.preservation];
+        const descs = [commitmentSection.carbonDesc, commitmentSection.circularDesc,
+                      commitmentSection.developmentDesc, commitmentSection.preservationDesc];
+        
+        if (titles[index]) item.querySelector('h3').textContent = titles[index];
+        if (descs[index]) item.querySelector('p').textContent = descs[index];
+      });
+    }
+
+    // 5. Footer
+    const footerSection = translations.footer[lang];
+    if (footerSection) {
+      document.querySelector('.footer .footer-title:nth-of-type(1)').textContent = footerSection.contact;
+      document.querySelector('.footer .footer-title:nth-of-type(2)').textContent = footerSection.about;
+      document.querySelector('.footer-bottom p').textContent = footerSection.rights;
+    }
+
+    // 6. Atualizar botão ativo do idioma
+    document.querySelectorAll('.lang-switcher .flag').forEach(b => b.classList.remove('active'));
     const btn = document.querySelector('.lang-switcher .flag[data-lang="'+lang+'"]');
     if(btn) btn.classList.add('active');
+
+    // 7. Links e elementos de navegação
+    document.querySelectorAll('[data-nav-' + lang + ']').forEach(el => {
+      const txt = el.getAttribute('data-nav-' + lang);
+      if(txt) el.textContent = txt;
+    });
+
+    // 8. Placeholders e textos de botões
+    document.querySelectorAll('[data-placeholder-' + lang + ']').forEach(el => {
+      const txt = el.getAttribute('data-placeholder-' + lang);
+      if(txt) el.placeholder = txt;
+    });
   }
-  // click handlers
-  document.addEventListener('click', (e)=>{
+
+  // Event Listeners
+  document.addEventListener('click', (e) => {
     const b = e.target.closest('.lang-switcher .flag');
     if(!b) return;
     e.preventDefault();
     setLang(b.getAttribute('data-lang'));
   });
-  // idioma inicial pelo navegador
-  const nav = (navigator.language || 'pt').slice(0,2);
+
+  // Definir idioma inicial
+  const nav = (navigator.language || 'pt-BR').slice(0,2);
   const start = (['pt','en','es'].includes(nav) ? nav : 'pt');
   setLang(start);
+
+  // Expor função de tradução globalmente (útil para chamadas dinâmicas)
+  window.setLanguage = setLang;
 })();
 </script>
-
 </body>
 </html>
