@@ -1,0 +1,46 @@
+name: CI - lint & visual check
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lint-and-screenshots:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run stylelint on CSS
+        run: npm run ci:lint
+
+      - name: Start static server (background)
+        run: npx http-server -p 8080 . &
+
+      - name: Wait for server
+        run: |
+          for i in 1 2 3 4 5; do
+            sleep 1
+            curl -sf http://localhost:8080 && break || true
+          done
+
+      - name: Run Puppeteer screenshot script
+        env:
+          TEST_URL: http://localhost:8080
+        run: npm run ci:screenshot
+
+      - name: Upload screenshots
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenshots
+          path: artifacts/screenshots

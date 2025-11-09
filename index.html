@@ -13,19 +13,34 @@
             box-sizing: border-box;
         }
 
-        :root {
-            --color-primary: #10b981;
-            --color-primary-dark: #059669;
-            --color-primary-light: #34d399;
-            --color-secondary: #064e3b;
-            --color-accent: #fbbf24;
-            --color-background: #f0fdf4;
-            --color-surface: #ffffff;
-            --color-text: #1f2937;
-            --color-text-light: #6b7280;
-            --color-border: #d1fae5;
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+    :root {
+      /* SEMCULT palette (applied globally) */
+      --color-primary: #4FAF47;        /* Verde principal */
+      --color-primary-dark: #296A1C;   /* Verde escuro */
+  --color-primary-light: #7EDB7A;  /* Verde claro para highlights */
+  --color-accent: #00447A;        /* Azul de apoio (usado em cabeçalho/rodapé) */
+  --color-accent-blue: #00447A;    /* alias mais explícito */
+  --color-secondary: var(--color-accent-blue); /* manter compatibilidade com uso anterior */
+  --color-background: #FFF4E5;    /* Creme de fundo principal */
+      --color-surface: #FFFFFF;       /* Caixas e superfícies brancas */
+      --color-text: #296A1C;          /* Texto principal em verde escuro */
+      --color-text-light: #4B6B5A;    /* Texto secundário (contraste suave) */
+      --color-dark-green: #296A1C;    /* Verde escuro complementar */
+  --color-border: #EAF6EA;        /* bordas sutis claras */
+  --color-muted: #F6FFFB;         /* neutro claro para placeholders */
+  /* UI / badge / accent variables */
+  --color-badge-bg: #dcfce7;      /* pale green badge bg */
+  --color-badge-text: #065f46;    /* badge text */
+  --color-badge-border: #bbf7d0;  /* badge border */
+  --color-muted-dark: #374151;    /* muted text (cards) */
+  --color-ui-border: #e5e7eb;     /* UI border */
+  --color-ui-bg: #f9fafb;         /* UI light bg */
+  --color-ui-text: #111827;       /* UI dark text */
+  --color-accent-light: #eef2ff;   /* small blue accents */
+  --color-accent-mid: #c7d2fe;     /* secondary blue accent */
+  --color-light: #FFFFFF;         /* branco neutro */
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -42,24 +57,24 @@
         }
 
         /* Hero Section */
-        .hero {
+    .hero {
             position: relative;
             height: 100vh;
             min-height: 600px;
-            background: linear-gradient(135deg, #064e3b 0%, #059669 50%, #10b981 100%);
+      background: linear-gradient(135deg, var(--color-accent-blue) 0%, var(--color-primary-dark) 50%, var(--color-primary) 100%);
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
         }
 
-        .hero-overlay {
+    .hero-overlay {
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><path d="M0,300 Q300,200 600,300 T1200,300 L1200,600 L0,600 Z" fill="rgba(6,78,59,0.3)"/></svg>')
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><path d="M0,300 Q300,200 600,300 T1200,300 L1200,600 L0,600 Z" fill="rgba(41,106,28,0.12)"/></svg>')
                 no-repeat bottom;
             background-size: cover;
             animation: wave 20s ease-in-out infinite;
@@ -70,11 +85,11 @@
             50% { transform: translateY(-20px); }
         }
 
-        .hero-content {
+    .hero-content {
             position: relative;
             z-index: 2;
             text-align: center;
-            color: white;
+      color: var(--color-light);
             padding: 40px 20px;
         }
 
@@ -518,26 +533,27 @@
         }
 
         .btn-primary {
-            background: white;
-            color: var(--color-primary);
+      background: var(--color-primary);
+      color: var(--color-light);
+      border: none;
         }
 
         .btn-primary:hover {
-            background: var(--color-background);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      background: var(--color-primary-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
         }
 
         .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
+      background: transparent;
+      color: var(--color-light);
+      border: 2px solid var(--color-light);
         }
 
         .btn-secondary:hover {
-            background: white;
-            color: var(--color-primary);
-            transform: translateY(-3px);
+      background: var(--color-light);
+      color: var(--color-primary);
+      transform: translateY(-3px);
         }
 
         /* Footer */
@@ -768,9 +784,11 @@
   margin: 28px 0 10px;
   letter-spacing: .04em;
   text-transform: uppercase;
-  background: linear-gradient(90deg, #064e3b, #059669, #10b981, #34d399);
+  background: linear-gradient(90deg, var(--color-accent-blue), var(--color-primary-dark), var(--color-primary), var(--color-primary-light));
   background-size: 200% 100%;
+  background-clip: text;
   -webkit-background-clip: text;
+  color: transparent;
   -webkit-text-fill-color: transparent;
   animation: partnersShimmer 8s linear infinite;
 }
@@ -822,11 +840,11 @@
   font-weight: 700;
   letter-spacing:.02em;
   transition: transform .15s ease, box-shadow .2s ease, background .2s ease;
-  background: #10b981;
+  background: var(--color-primary);
   color: white;
   box-shadow: 0 6px 16px rgba(16,185,129,.35);
 }
-.btn-open{ background:#059669; }
+.btn-open{ background:var(--color-primary-dark); }
 .btn-download:hover, .btn-open:hover{
   transform: translateY(-2px);
   box-shadow: 0 12px 28px rgba(16,185,129,.35);
@@ -839,7 +857,7 @@
 
 /* === Botão de Mapa Turístico Simplificado === */
 .mapa-belem-wrapper{
-  background: linear-gradient(180deg, #ffffff, #f0fdf4);
+  background: linear-gradient(180deg, #ffffff, var(--color-background));
   padding: 60px 16px 20px;
   text-align: center;
 }
@@ -853,7 +871,7 @@
   border-radius: 999px;
   text-decoration: none;
   color: white;
-  background: linear-gradient(90deg, #059669, #10b981, #34d399);
+  background: linear-gradient(90deg, var(--color-primary-dark), var(--color-primary), var(--color-primary-light));
   background-size: 200% 100%;
   animation: gradientSlide 8s linear infinite;
   box-shadow: 0 8px 20px rgba(16,185,129,.35);
@@ -886,7 +904,7 @@
   border-radius: 999px;
   text-decoration: none;
   color: #fff;
-  background: linear-gradient(90deg, #059669, #10b981, #34d399);
+  background: linear-gradient(90deg, var(--color-primary-dark), var(--color-primary), var(--color-primary-light));
   background-size: 200% 100%;
   animation: gradientSlide 8s linear infinite;
   box-shadow: 0 8px 20px rgba(16,185,129,.30);
@@ -912,7 +930,7 @@
 }
 .card{
   background:#ffffff;
-  border:1px solid #e6f4ef;
+  border:1px solid var(--color-border);
   border-radius:16px;
   overflow:hidden;
   box-shadow: 0 10px 24px rgba(16,185,129,.12);
@@ -921,25 +939,25 @@
   transition:transform .25s ease, box-shadow .25s ease;
 }
 .card:hover{ transform: translateY(-4px); box-shadow: 0 18px 36px rgba(16,185,129,.18); }
-.card-media{ width:100%; aspect-ratio: 1 / 1; background:#f0fdf4; display:grid; place-items:center; }
+.card-media{ width:100%; aspect-ratio: 1 / 1; background:var(--color-background); display:grid; place-items:center; }
 .card-img{ width:100%; height:100%; object-fit:cover; display:block; }
-.card-img.placeholder{ background: repeating-conic-gradient(from 45deg, #e6f4ef 0% 25%, #f6fffb 0% 50%); }
+  .card-img.placeholder{ background: repeating-conic-gradient(from 45deg, var(--color-border) 0% 25%, var(--color-muted) 0% 50%); }
 .card-body{ padding:16px 16px 18px; display:flex; flex-direction:column; gap:10px; }
 .card-badge{
   display:inline-block; align-self:flex-start;
-  background:#dcfce7; color:#065f46; border:1px solid #bbf7d0;
+  background:var(--color-badge-bg); color:var(--color-badge-text); border:1px solid var(--color-badge-border);
   padding:6px 10px; border-radius:999px; font-weight:700; font-size:.75rem; letter-spacing:.3px;
 }
-.card-title{ font-size:1.15rem; font-weight:900; color:#064e3b; margin:2px 0; }
-.card-desc{ color:#374151; font-size:.98rem; line-height:1.6; min-height:3.2em; }
+.card-title{ font-size:1.15rem; font-weight:900; color:var(--color-primary-dark); margin:2px 0; }
+.card-desc{ color:var(--color-muted-dark); font-size:.98rem; line-height:1.6; min-height:3.2em; }
 .card-actions{ display:flex; flex-wrap:wrap; gap:8px; margin-top:6px; align-items:center; }
 .chip{
   display:inline-flex; align-items:center; gap:6px; padding:8px 10px; border-radius:10px;
-  border:1px solid #e5e7eb; background:#f9fafb; color:#111827; text-decoration:none; font-weight:600; font-size:.9rem;
+  border:1px solid var(--color-ui-border); background:var(--color-ui-bg); color:var(--color-ui-text); text-decoration:none; font-weight:600; font-size:.9rem;
 }
-.chip:hover{ background:#eef2ff; border-color:#c7d2fe; }
+.chip:hover{ background:var(--color-accent-light); border-color:var(--color-accent-mid); }
 .chip svg{ flex:0 0 auto; opacity:.9 }
-.chip.muted{ color:#6b7280; background:#f3f4f6; border-color:#e5e7eb; }
+.chip.muted{ color:var(--color-text-light); background:var(--color-ui-bg); border-color:var(--color-ui-border); }
 @media (max-width: 480px){
   .cards-grid{ grid-template-columns: 1fr; }
 }
@@ -949,14 +967,14 @@
 .lang-switcher{
   position: fixed; top: 12px; right: 16px; z-index: 1200;
   display: flex; gap: 10px; padding: 6px 10px;
-  background: linear-gradient(135deg, rgba(6,78,59,.8), rgba(5,150,105,.7));
+  background: linear-gradient(135deg, rgba(0,68,122,.85), rgba(41,106,28,.75));
   border: 1px solid rgba(255,255,255,.25); border-radius: 14px; backdrop-filter: blur(6px);
   box-shadow: 0 8px 22px rgba(0,0,0,.22);
 }
 .lang-switcher .flag{ border: none; background: transparent; padding: 0; cursor: pointer; opacity: .78; transition: transform .2s, opacity .2s, filter .2s; }
 .lang-switcher .flag.active, .lang-switcher .flag:hover{ opacity: 1; transform: translateY(-1px); filter: drop-shadow(0 2px 4px rgba(0,0,0,.25)); }
 .lang-switcher img{ width: 30px; height: 20px; border-radius: 4px; display:block; }
-footer.credits-green{ background: linear-gradient(135deg, #064e3b, #059669); color: #eafaf4; margin-top: 60px; }
+footer.credits-green{ background: linear-gradient(135deg, var(--color-accent-blue), var(--color-primary-dark)); color: #eafaf4; margin-top: 60px; }
 footer.credits-green .credits-inner{ display:flex; align-items:center; justify-content:space-between; gap:14px; padding: 16px; }
 footer.credits-green .credit-link{ display:inline-flex; align-items:center; gap:8px; color:#eafaf4; text-decoration:none; font-weight:700; padding:8px 10px; border-radius:10px; border:1px solid rgba(255,255,255,.18); background:rgba(255,255,255,.06); }
 footer.credits-green .credit-link:hover{ background:rgba(255,255,255,.15); }
@@ -966,7 +984,7 @@ footer.credits-green .credits-note{ text-align:center; padding:10px 16px; font-s
 </style>
 <style id="footer-v8-fix">
 .site-footer, .footer {
-  background: linear-gradient(135deg, #064e3b, #065f46);
+  background: linear-gradient(135deg, var(--color-accent-blue), var(--color-primary-dark));
   color: #eafaf4;
 }
 .site-footer .footer-text, .site-footer .footer-title { color: #eafaf4; }
@@ -1060,8 +1078,8 @@ hr, .footer-divider { display:none !important; }
 <text class="logo-text" x="10" y="60">COP30</text>
 </svg>
 </div>
-<h1 class="hero-title" data-i18n-en="Sustainable Tourism" data-i18n-es="Turismo Sostenible" data-i18n-pt="COP30 NA AMAZÔNIA">COP30 NA AMAZÔNIA</h1>
-<p class="hero-subtitle" data-i18n-en="Discover our partners committed to the planet’s future" data-i18n-es="Conozca a nuestros socios comprometidos con el futuro del planeta" data-i18n-pt="Empresas de Turismo Local">Empresas de Turismo Local</p>
+<h1 class="hero-title" data-i18n-en="Sustainable Tourism" data-i18n-es="Turismo Sostenible" data-i18n-pt="Turismo Sustentável">Turismo Sustentável</h1>
+<p class="hero-subtitle" data-i18n-en="Discover our partners committed to the planet’s future" data-i18n-es="Conozca a nuestros socios comprometidos con el futuro del planeta" data-i18n-pt="Conheça nossos parceiros comprometidos com o futuro do planeta">Conheça nossos parceiros comprometidos com o futuro do planeta</p>
 <div class="leaf-decoration">
 <div class="leaf leaf-1"></div>
 <div class="leaf leaf-2"></div>
